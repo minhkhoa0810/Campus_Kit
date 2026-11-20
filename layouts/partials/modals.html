@@ -11,7 +11,7 @@
         type="button"
         aria-label="Đóng giỏ hàng"
         class="w-8 h-8 rounded-full bg-[#e8e8ed] hover:bg-[#d2d2d7] text-[#1d1d1f] text-xs font-medium flex items-center justify-center shrink-0 transition-colors"
-      >✕</button>
+      ><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
     </div>
 
     <div id="cartItemsContainer" class="flex-1 overflow-y-auto px-6 py-4 divide-y divide-[#d2d2d7]/60"></div>
@@ -39,22 +39,45 @@
         </div>
       </div>
 
-      <!-- Pickup Location Selector (3 Official Post-Merger Locations) -->
-      <div class="space-y-1.5">
-        <label for="cartDeliveryInput" class="block text-[11.5px] font-medium text-[#6e6e73] pl-1">
-          Chọn điểm nhận hàng
-        </label>
+      <!-- Checkout Customer Info + Pickup Location + Payment Method (L02) -->
+      <div class="space-y-2">
+        <div class="grid grid-cols-2 gap-2">
+          <input
+            id="cartCustomerName"
+            type="text"
+            placeholder="Họ và tên *"
+            aria-label="Họ và tên người nhận"
+            class="w-full rounded-2xl border border-[#d2d2d7] bg-white focus:border-[#0071E3] px-3.5 py-2 text-[12px] text-[#1d1d1f] placeholder-[#86868b] focus:outline-none transition-colors"
+          />
+          <input
+            id="cartCustomerPhone"
+            type="tel"
+            placeholder="Số điện thoại *"
+            aria-label="Số điện thoại người nhận"
+            class="w-full rounded-2xl border border-[#d2d2d7] bg-white focus:border-[#0071E3] px-3.5 py-2 text-[12px] text-[#1d1d1f] placeholder-[#86868b] focus:outline-none transition-colors"
+          />
+        </div>
         <div class="relative">
           <select
             id="cartDeliveryInput"
             aria-label="Chọn điểm nhận hàng"
-            class="w-full appearance-none rounded-2xl border border-[#d2d2d7] bg-white focus:border-[#0071E3] pl-4 pr-9 py-2.5 text-[12.5px] font-medium text-[#1d1d1f] focus:outline-none transition-colors cursor-pointer"
+            class="w-full appearance-none rounded-2xl border border-[#d2d2d7] bg-white focus:border-[#0071E3] pl-3.5 pr-8 py-2 text-[12px] font-medium text-[#1d1d1f] focus:outline-none transition-colors cursor-pointer"
           >
             <option value="khtn">CS1 – ĐH Khoa học Tự nhiên (227 Nguyễn Văn Cừ, P. Chợ Quán)</option>
             <option value="ktx-a">Ký túc xá Khu A – ĐHQG-HCM (P. Linh Xuân)</option>
             <option value="ktx-b">Ký túc xá Khu B – ĐHQG-HCM (P. Đông Hòa)</option>
           </select>
-          <span aria-hidden="true" class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-[#6e6e73] text-xs">▾</span>
+          <svg class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#6e6e73]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+        <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-label="Phương thức thanh toán">
+          <label class="flex items-center gap-2 rounded-xl border border-[#d2d2d7] bg-white px-3 py-2 text-[11.5px] font-medium text-[#1d1d1f] cursor-pointer has-[:checked]:border-[#0071E3] has-[:checked]:bg-[#0071E3]/[0.05]">
+            <input type="radio" name="cartPaymentMethod" value="COD" checked class="accent-[#0071E3]" />
+            <span>Tiền mặt (COD)</span>
+          </label>
+          <label class="flex items-center gap-2 rounded-xl border border-[#d2d2d7] bg-white px-3 py-2 text-[11.5px] font-medium text-[#1d1d1f] cursor-pointer has-[:checked]:border-[#0071E3] has-[:checked]:bg-[#0071E3]/[0.05]">
+            <input type="radio" name="cartPaymentMethod" value="VietQR" class="accent-[#0071E3]" />
+            <span>Chuyển khoản VietQR</span>
+          </label>
         </div>
       </div>
 
@@ -92,7 +115,7 @@
       type="button"
       aria-label="Đóng chi tiết sản phẩm"
       class="sticky sm:absolute top-4 right-4 float-right m-3 sm:m-0 z-10 w-9 h-9 rounded-full bg-[#e8e8ed]/90 hover:bg-[#d2d2d7] text-[#1d1d1f] text-xs font-medium flex items-center justify-center transition-colors"
-    >✕</button>
+    ><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
     <div id="quickViewContent"></div>
   </div>
 </div>
@@ -105,7 +128,7 @@
       type="button"
       aria-label="Đóng cửa sổ đăng nhập"
       class="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#e8e8ed] hover:bg-[#d2d2d7] text-[#1d1d1f] text-xs font-medium flex items-center justify-center transition-colors"
-    >✕</button>
+    ><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
 
     <div class="mb-6">
       <p class="as-eyebrow mb-1.5">CampusKit ID • Giáo Dục</p>
@@ -154,7 +177,7 @@
       type="button"
       aria-label="Đóng thông tin"
       class="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#e8e8ed] hover:bg-[#d2d2d7] text-[#1d1d1f] text-xs font-medium flex items-center justify-center transition-colors"
-    >✕</button>
+    ><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
     <div id="infoModalContent"></div>
   </div>
 </div>

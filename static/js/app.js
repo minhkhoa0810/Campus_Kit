@@ -34,10 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const STORAGE_KEY = 'campuskit_state_v1';
   const defaultPersisted = {
-    cart: [
-      { productId: 'prod-1', qty: 1 },
-      { productId: 'prod-3', qty: 1 }
-    ],
+    cart: [],
     appliedVoucher: null,
     eduUser: null,
     placedOrders: [],
@@ -1098,6 +1095,21 @@ document.addEventListener('DOMContentLoaded', () => {
         step3Label: 'Đang tiến hành giao'
       }
     };
+    const nameInput = document.getElementById('cartCustomerName');
+    const phoneInput = document.getElementById('cartCustomerPhone');
+    const custName = (nameInput?.value || '').trim();
+    const custPhone = (phoneInput?.value || '').trim();
+    if (!custName) {
+      nameInput?.focus();
+      return showToast('Vui lòng nhập họ và tên người nhận!');
+    }
+    if (!/^[0-9+\s.-]{9,15}$/.test(custPhone)) {
+      phoneInput?.focus();
+      return showToast('Vui lòng nhập số điện thoại hợp lệ (9–11 số)!');
+    }
+    const payMethod = document.querySelector('input[name="cartPaymentMethod"]:checked')?.value || 'COD';
+    const payLabel = payMethod === 'VietQR' ? 'Chuyển khoản VietQR (Mô phỏng)' : 'Thanh toán tiền mặt (COD)';
+
     const addressInput = document.getElementById('cartDeliveryInput');
     const selectedKey = (addressInput?.value || 'khtn').trim();
     const point = PICKUP_POINTS[selectedKey] || PICKUP_POINTS.khtn;
@@ -1107,8 +1119,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const newOrder = {
       id: orderId,
-      customer: persisted.eduUser?.email ? persisted.eduUser.email.split('@')[0] : 'Khách hàng Sinh viên',
-      phone: '0900000000',
+      customer: custName,
+      phone: custPhone.replace(/\s+/g, ''),
       email: persisted.eduUser?.email || 'student@campuskit.vn',
       createdAt: nowStr,
       eta: 'Dự kiến giao trong vòng 2 giờ tới',
@@ -1117,7 +1129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       step3Label: point.step3Label,
       step: 1,
       statusLabel: 'Đã xác nhận đơn hàng mới',
-      payment: discount > 0 ? `COD / VietQR (Đã áp mã ${persisted.appliedVoucher})` : 'Thanh toán khi nhận hàng (COD)',
+      payment: discount > 0 ? `${payLabel} (Đã áp mã ${persisted.appliedVoucher})` : payLabel,
       discount,
       total: finalTotal,
       items: orderItems,
@@ -2230,4 +2242,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial Cart Render
   renderCart();
+
+  // L07: Sync opaque search curtain backdrop visibility
+  const searchCurtainEl = document.getElementById('appleSearchCurtain');
+  const searchBackdropEl = document.getElementById('searchCurtainBackdrop');
+  if (searchCurtainEl && searchBackdropEl) {
+    const syncBackdrop = () => {
+      searchBackdropEl.classList.toggle('hidden', searchCurtainEl.classList.contains('hidden'));
+    };
+    new MutationObserver(syncBackdrop).observe(searchCurtainEl, { attributes: true, attributeFilter: ['class'] });
+    searchBackdropEl.addEventListener('click', () => {
+      document.getElementById('closeSearchCurtainBtn')?.click();
+    });
+  }
+
+  // L03: Contact support form on /gioi-thieu/#lien-he
+  document.getElementById('contactSupportForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const st = document.getElementById('contactFormStatus');
+    st?.classList.remove('hidden');
+    e.target.reset();
+    showToast('Đã gửi tin nhắn liên hệ thành công!');
+  });
 });

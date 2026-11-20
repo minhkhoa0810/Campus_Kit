@@ -251,9 +251,14 @@
     // C. ScrollTrigger Smooth Deceleration Batch Reveals
     if (typeof window.ScrollTrigger !== 'undefined') {
       const batchReveal = (selector, staggerVal = 0.055, yVal = 22, easeName = 'expo.out') => {
-        const targets = Array.from(document.querySelectorAll(selector)).filter(
-          (el) => !el.classList.contains('hidden') && !scheduled.has(el)
-        );
+        const viewportFold = (window.innerHeight || 900) * 0.92;
+        const targets = Array.from(document.querySelectorAll(selector)).filter((el) => {
+          if (el.classList.contains('hidden') || scheduled.has(el)) return false;
+          // L08: Never hide elements already visible in the initial viewport (above-the-fold)
+          const rect = el.getBoundingClientRect();
+          if (rect.top < viewportFold) return false;
+          return true;
+        });
         if (!targets.length) return;
         targets.forEach((el) => scheduled.add(el));
         gsap.set(targets, { opacity: 0, y: yVal });
@@ -288,7 +293,7 @@
       batchReveal('.voucher-card:not(.hidden)', 0.065, 22, 'expo.out');
 
       // /cong-cu/ Study Hub Workspaces
-      batchReveal('#tool-pomodoro, #tool-whitenoise, #tool-gpa', 0.09, 24, 'expo.out');
+      batchReveal('#tool-exam, #tool-deadline', 0.09, 24, 'expo.out');
 
       // /goc-hoc-tap/ Lookbook Showcases & Frosted Hotspot Pins
       batchReveal('.lookbook-card:not(.hidden)', 0.09, 26, 'expo.out');

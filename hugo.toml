@@ -63,7 +63,7 @@ disableKinds = ["taxonomy", "term"]
   weight = 6
 
 [[menu.main]]
-  name = "Về CampusKit"
+  name = "Giới Thiệu & Liên Hệ"
   identifier = "about"
   pageRef = "/gioi-thieu"
   weight = 7
