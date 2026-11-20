@@ -3,7 +3,7 @@
 <section class="pt-8 sm:pt-12 pb-6 sm:pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
-      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <a href="{{ "" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
       <span class="text-[#86868b]">›</span>
       <span class="text-[#1d1d1f]">Công cụ học tập</span>
     </nav>
@@ -377,7 +377,7 @@
           Phụ kiện tăng sự tập trung. <span class="as-title-muted text-[#6e6e73]">Đồng bộ hoàn hảo cùng Study Hub.</span>
         </h2>
       </div>
-      <a href="{{ "/san-pham/?cat=Năng suất" | relURL }}" class="text-xs sm:text-sm font-medium text-[#0066cc] hover:underline shrink-0">
+      <a href="{{ "san-pham/?cat=Năng suất" | relURL }}" class="text-xs sm:text-sm font-medium text-[#0066cc] hover:underline shrink-0">
         Xem tất cả phụ kiện ›
       </a>
     </div>
@@ -385,7 +385,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {{ range where hugo.Data.products "category" "Năng suất" }}
       <div class="bg-white rounded-[24px] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[2px_8px_22px_rgba(0,0,0,0.09)] transition-shadow p-5 flex gap-4 items-center">
-        <img src="{{ .image | relURL }}" alt="{{ .name }}" data-quick-view="{{ .id }}" class="w-24 h-24 rounded-[16px] bg-[#f5f5f7] object-cover shrink-0 cursor-pointer" />
+        <img src="{{ strings.TrimPrefix "/" .image | relURL }}" alt="{{ .name }}" data-quick-view="{{ .id }}" class="w-24 h-24 rounded-[16px] bg-[#f5f5f7] object-cover shrink-0 cursor-pointer" />
         <div class="min-w-0 flex-1">
           <p class="text-[11px] font-semibold text-[#b64400] mb-0.5">{{ .subCategory }}</p>
           <h3 data-quick-view="{{ .id }}" class="text-sm font-semibold text-[#1d1d1f] hover:text-[#0066cc] line-clamp-2 leading-snug cursor-pointer transition-colors">{{ .name }}</h3>

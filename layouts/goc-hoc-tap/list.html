@@ -2,7 +2,7 @@
 <section class="pt-8 sm:pt-12 pb-6 sm:pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
-      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <a href="{{ "" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
       <span class="text-[#86868b]">›</span>
       <span class="text-[#1d1d1f]">Combo Tiết Kiệm</span>
     </nav>
@@ -19,7 +19,7 @@
           Mỗi combo được ghép sẵn từ những sản phẩm thật đang có trên CampusKit — tiết kiệm ngay 10%–12% so với mua lẻ từng món và vẫn áp dụng được mã ưu đãi sinh viên.
         </p>
       </div>
-      <a href="{{ "/san-pham/" | relURL }}" class="as-pill-outline shrink-0 self-start lg:self-auto">
+      <a href="{{ "san-pham/" | relURL }}" class="as-pill-outline shrink-0 self-start lg:self-auto">
         <span>Xem tất cả {{ len hugo.Data.products }} sản phẩm lẻ ›</span>
       </a>
     </div>
@@ -106,7 +106,7 @@
               >
                 <div class="aspect-square rounded-xl bg-white overflow-hidden mb-1.5">
                   <img
-                    src="{{ $item.image | relURL }}"
+                    src="{{ strings.TrimPrefix "/" $item.image | relURL }}"
                     alt="{{ $item.name }}"
                     loading="lazy"
                     class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300"

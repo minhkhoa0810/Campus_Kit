@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Params.brandName }}{{ end }}</title>
   <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
-  <link rel="icon" type="image/png" href="{{ "/images/logo-icon.png" | relURL }}" />
-  <link rel="apple-touch-icon" href="{{ "/images/logo-icon.png" | relURL }}" />
+  <link rel="icon" type="image/png" href="{{ "images/logo-icon.png" | relURL }}" />
+  <link rel="apple-touch-icon" href="{{ "images/logo-icon.png" | relURL }}" />
 
   <!-- Google Fonts: Inter (300, 400, 500, 600, 700) paired with SF Pro stack -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -302,7 +302,7 @@
   <!-- Global Structured Data for Cross-Page Cart, Vouchers & Order Tracking -->
   <script id="campuskit-global-data" type="application/json">
     {{- dict
-      "baseURL" ("/" | relURL)
+      "baseURL" ("" | relURL)
       "products" hugo.Data.products
       "vouchers" hugo.Data.vouchers
       "ordersData" hugo.Data.orders

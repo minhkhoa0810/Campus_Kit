@@ -46,7 +46,7 @@
         data-discount="{{ $product.discountPercent }}"
         data-featured="{{ if $product.featured }}true{{ else }}false{{ end }}"
         data-index="{{ $index }}"
-        data-image="{{ $product.image | relURL }}"
+        data-image="{{ strings.TrimPrefix "/" $product.image | relURL }}"
       >
         <div class="ck-flashcard-inner">
           <!-- =========================================================== -->
@@ -75,7 +75,7 @@
                 title="Chạm để lật xem thông số mặt sau"
               >
                 <img
-                  src="{{ $product.image | relURL }}"
+                  src="{{ strings.TrimPrefix "/" $product.image | relURL }}"
                   alt="{{ $product.name }}"
                   loading="lazy"
                   class="w-full h-full object-cover object-center uniqlo-card-img"
@@ -204,7 +204,7 @@
         Khám phá trọn bộ <strong class="font-semibold text-[#1d1d1f]">{{ len hugo.Data.products }} sản phẩm &amp; phụ kiện bàn học tối giản</strong> tại Cửa Hàng.
       </p>
       <a
-        href="{{ "/san-pham/" | relURL }}"
+        href="{{ "san-pham/" | relURL }}"
         class="as-pill-outline"
       >
         <span>Xem tất cả {{ len hugo.Data.products }} sản phẩm</span>

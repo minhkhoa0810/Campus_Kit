@@ -41,7 +41,7 @@
 
         <div class="relative mt-4 w-full h-[228px] rounded-2xl overflow-hidden {{ $card.imgBg }} shadow-[0_8px_20px_rgba(0,0,0,0.06)]">
           <img
-            src="{{ .image | relURL }}"
+            src="{{ strings.TrimPrefix "/" .image | relURL }}"
             alt="{{ .name }}"
             loading="lazy"
             class="w-full h-full {{ $card.fit }} object-center group-hover:scale-105 transition-transform duration-500"

@@ -3,7 +3,7 @@
 <section class="pt-8 sm:pt-12 pb-5 sm:pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
-      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <a href="{{ "" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
       <span class="text-[#86868b]">›</span>
       <span class="text-[#1d1d1f]">Sản phẩm</span>
     </nav>
@@ -35,7 +35,7 @@
           </span>
           <div>
             <p class="font-semibold text-[#1d1d1f]">Đặc quyền học tập: Giảm ngay 15%</p>
-            <a href="{{ "/ma-giam-gia/" | relURL }}" class="text-[#0066cc] hover:underline font-medium">Xác thực email trường để nhận ưu đãi ›</a>
+            <a href="{{ "ma-giam-gia/" | relURL }}" class="text-[#0066cc] hover:underline font-medium">Xác thực email trường để nhận ưu đãi ›</a>
           </div>
         </div>
       </div>
@@ -552,7 +552,7 @@
             Xác thực một lần để mở khóa mã EDU15VIP giảm trực tiếp không cần đơn tối thiểu.
           </p>
           <div class="pt-1">
-            <a href="{{ "/ma-giam-gia/" | relURL }}" class="as-pill-blue inline-flex items-center justify-center w-full rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white py-2 px-3.5 text-xs font-medium transition-colors">
+            <a href="{{ "ma-giam-gia/" | relURL }}" class="as-pill-blue inline-flex items-center justify-center w-full rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white py-2 px-3.5 text-xs font-medium transition-colors">
               Nhận ưu đãi sinh viên ›
             </a>
           </div>
@@ -613,7 +613,7 @@
             data-discount="{{ $product.discountPercent }}"
             data-featured="true"
             data-index="{{ $index }}"
-            data-image="{{ $product.image | relURL }}"
+            data-image="{{ strings.TrimPrefix "/" $product.image | relURL }}"
           >
             <div class="ck-flashcard-inner !rounded-[24px] !shadow-[2px_4px_12px_rgba(0,0,0,0.05)] group-hover:!shadow-[2px_10px_26px_rgba(0,0,0,0.09)] transition-shadow duration-300">
 
@@ -638,7 +638,7 @@
                   <div class="px-5 pt-2">
                     <div class="relative aspect-square w-full rounded-[18px] bg-[#f5f5f7] overflow-hidden cursor-pointer" data-flip-card title="Bấm để lật xem thông số chi tiết">
                       <img
-                        src="{{ $product.image | relURL }}"
+                        src="{{ strings.TrimPrefix "/" $product.image | relURL }}"
                         alt="{{ $product.name }}"
                         loading="lazy"
                         class="w-full h-full object-cover object-center uniqlo-card-img"
