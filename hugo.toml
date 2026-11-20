@@ -29,43 +29,43 @@ disableKinds = ["taxonomy", "term"]
 [[menu.main]]
   name = "Trang Chủ"
   identifier = "home"
-  url = "/"
+  pageRef = "/"
   weight = 1
 
 [[menu.main]]
   name = "Sản Phẩm"
   identifier = "products"
-  url = "/san-pham/"
+  pageRef = "/san-pham"
   weight = 2
 
 [[menu.main]]
   name = "Mã Giảm Giá"
   identifier = "vouchers"
-  url = "/ma-giam-gia/"
+  pageRef = "/ma-giam-gia"
   weight = 3
 
 [[menu.main]]
   name = "Công Cụ Học Tập"
   identifier = "tools"
-  url = "/cong-cu/"
+  pageRef = "/cong-cu"
   weight = 4
 
 [[menu.main]]
   name = "Combo"
   identifier = "combo"
-  url = "/combo/"
+  pageRef = "/combo"
   weight = 5
 
 [[menu.main]]
   name = "Tra Cứu Đơn"
   identifier = "tracking"
-  url = "/tra-cuu/"
+  pageRef = "/tra-cuu"
   weight = 6
 
 [[menu.main]]
   name = "Về CampusKit"
   identifier = "about"
-  url = "/gioi-thieu/"
+  pageRef = "/gioi-thieu"
   weight = 7
 
 # =============================================================================
