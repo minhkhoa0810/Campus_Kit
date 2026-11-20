@@ -1,0 +1,774 @@
+{{ define "main" }}
+<!-- APPLE STORE VIETNAM SPLIT HEADER: SẢN PHẨM -->
+<section class="pt-8 sm:pt-12 pb-5 sm:pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
+      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <span class="text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Sản phẩm</span>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-5xl font-semibold tracking-[-0.025em] text-[#1d1d1f] leading-[1.1]">
+          Tất cả sản phẩm. <span class="text-[#6e6e73]">Đủ lựa chọn tối giản cho góc học tập.</span>
+        </h1>
+      </div>
+
+      <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 shrink-0 text-xs">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center text-[#1d1d1f] shrink-0" aria-hidden="true">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </span>
+          <div>
+            <p class="font-semibold text-[#1d1d1f]">Giao nhanh từ 2 giờ.</p>
+            <p class="text-[#6e6e73]">Miễn phí vận chuyển đơn từ 199.000₫</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center text-[#0071e3] shrink-0" aria-hidden="true">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            </svg>
+          </span>
+          <div>
+            <p class="font-semibold text-[#1d1d1f]">Đặc quyền học tập: Giảm ngay 15%</p>
+            <a href="{{ "/ma-giam-gia/" | relURL }}" class="text-[#0066cc] hover:underline font-medium">Xác thực email trường để nhận ưu đãi ›</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG BODY: APPLE STORE FILTER PANEL + FLOATING 3D FLASHCARD TILES ON #F5F5F7 -->
+<section id="featured-products" class="pb-10 sm:pb-14" data-full-catalog="true">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Mobile Filter Toggle -->
+    <div class="lg:hidden mb-5">
+      <button
+        id="toggleCatalogSidebarBtn"
+        type="button"
+        class="w-full rounded-full bg-white hover:bg-[#fafafc] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] py-3.5 px-5 text-xs font-semibold text-[#1d1d1f] flex items-center justify-between transition-all"
+      >
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#6e6e73]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+          </svg>
+          <span>Bộ lọc danh mục &amp; mức giá</span>
+        </span>
+        <span id="toggleCatalogSidebarIcon" class="text-base font-medium text-[#0071e3] leading-none">+</span>
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 xl:gap-8 items-start">
+
+      <!-- LEFT SIDEBAR: CLEAN E-COMMERCE FILTER PANEL -->
+      <aside id="catalogSidebar" class="hidden lg:block lg:col-span-3 bg-white rounded-[20px] border border-black/[0.05] shadow-[0_2px_12px_rgba(0,0,0,0.04)] p-5 space-y-5 lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto no-scrollbar">
+
+        <!-- Group 1: Main Categories with In-Place Accordion Sub-categories -->
+        <div class="pb-5 border-b border-[#e5e5ea]" id="ckCategoryAccordionWrapper">
+          <button
+            id="toggleCategorySectionBtn"
+            type="button"
+            aria-expanded="true"
+            class="w-full flex items-center justify-between text-left mb-3 group focus:outline-none"
+          >
+            <h2 class="text-[13px] font-semibold tracking-tight text-[#1d1d1f]">
+              Danh mục sản phẩm
+            </h2>
+            <svg
+              id="toggleCategorySectionIcon"
+              class="w-4 h-4 text-[#86868b] group-hover:text-[#1d1d1f] transition-transform duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+
+          <div id="catalogCategoryList" class="space-y-1">
+            <button
+              type="button"
+              data-catalog-cat="all"
+              data-cat-label="Tất cả sản phẩm"
+              class="w-full flex items-center justify-between px-3 py-2 text-[13px] text-left rounded-xl bg-[#1d1d1f] text-white font-semibold transition-all"
+            >
+              <span class="truncate pr-2">Tất cả sản phẩm</span>
+              <span data-cat-count class="text-[11px] px-2 py-0.5 rounded-full bg-white/15 text-white/90 tabular-nums shrink-0">{{ len hugo.Data.products }}</span>
+            </button>
+
+            {{ range .Site.Menus.categories }}
+              {{ if ne .Identifier "all" }}
+                {{ $catId := .Identifier }}
+                {{ $catTitle := .Name }}
+                {{ $count := 0 }}
+                {{ range hugo.Data.products }}
+                  {{ if or (eq .category $catId) (eq .extraCategories $catId) }}
+                    {{ $count = add $count 1 }}
+                  {{ end }}
+                {{ end }}
+                <div class="ck-cat-accordion" data-accordion-cat="{{ $catId }}">
+                  <button
+                    type="button"
+                    data-catalog-cat="{{ $catId }}"
+                    data-cat-label="{{ $catTitle }}"
+                    aria-expanded="false"
+                    class="w-full flex items-center justify-between px-3 py-2 text-[13px] text-left rounded-xl text-[#1d1d1f] hover:bg-[#f5f5f7] font-medium transition-all group"
+                  >
+                    <span class="truncate pr-2">{{ $catTitle }}</span>
+                    <span class="inline-flex items-center gap-1.5 shrink-0">
+                      <span data-cat-count class="text-[11px] text-[#86868b] group-hover:text-[#1d1d1f] tabular-nums">{{ $count }}</span>
+                      <svg data-accordion-chevron class="w-3.5 h-3.5 text-[#86868b] group-hover:text-[#1d1d1f] transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <!-- Inline Accordion Sub-categories -->
+                  <div
+                    data-accordion-panel="{{ $catId }}"
+                    class="hidden ml-3 pl-3 mt-1 mb-1.5 border-l border-[#e5e5ea] space-y-0.5"
+                  >
+                    {{ $seenSubs := slice }}
+                    {{ range hugo.Data.categories }}
+                      {{ if eq .group $catId }}
+                        {{ $subName := .name }}
+                        {{ $seenSubs = $seenSubs | append $subName }}
+                        {{ $subCount := 0 }}
+                        {{ range hugo.Data.products }}
+                          {{ if eq .subCategory $subName }}
+                            {{ $subCount = add $subCount 1 }}
+                          {{ end }}
+                        {{ end }}
+                        <button
+                          type="button"
+                          data-catalog-sub="{{ $subName }}"
+                          data-parent-cat="{{ $catId }}"
+                          class="w-full flex items-center justify-between gap-2 px-2.5 py-1.5 text-[12.5px] text-left rounded-lg text-[#6e6e73] hover:text-[#1d1d1f] hover:bg-[#f5f5f7] transition-colors"
+                        >
+                          <span class="flex items-center gap-2 min-w-0">
+                            <span data-sub-dot class="w-1.5 h-1.5 rounded-full bg-transparent shrink-0 transition-colors"></span>
+                            <span class="truncate">{{ $subName }}</span>
+                          </span>
+                          <span class="text-[11px] text-[#86868b] tabular-nums shrink-0">{{ $subCount }}</span>
+                        </button>
+                      {{ end }}
+                    {{ end }}
+                    {{ range hugo.Data.products }}
+                      {{ if and (or (eq .category $catId) (eq .extraCategories $catId)) (not (in $seenSubs .subCategory)) }}
+                        {{ $subName := .subCategory }}
+                        {{ $seenSubs = $seenSubs | append $subName }}
+                        {{ $subCount := 0 }}
+                        {{ range hugo.Data.products }}
+                          {{ if eq .subCategory $subName }}
+                            {{ $subCount = add $subCount 1 }}
+                          {{ end }}
+                        {{ end }}
+                        <button
+                          type="button"
+                          data-catalog-sub="{{ $subName }}"
+                          data-parent-cat="{{ $catId }}"
+                          class="w-full flex items-center justify-between gap-2 px-2.5 py-1.5 text-[12.5px] text-left rounded-lg text-[#6e6e73] hover:text-[#1d1d1f] hover:bg-[#f5f5f7] transition-colors"
+                        >
+                          <span class="flex items-center gap-2 min-w-0">
+                            <span data-sub-dot class="w-1.5 h-1.5 rounded-full bg-transparent shrink-0 transition-colors"></span>
+                            <span class="truncate">{{ $subName }}</span>
+                          </span>
+                          <span class="text-[11px] text-[#86868b] tabular-nums shrink-0">{{ $subCount }}</span>
+                        </button>
+                      {{ end }}
+                    {{ end }}
+                  </div>
+                </div>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+
+        <!-- Group 2: Price Range (Compact Checkboxes + Custom Input + Dual Slider) -->
+        <div class="pb-5 border-b border-[#e5e5ea]" id="ckPriceFilterWidget">
+          <button
+            id="togglePriceSectionBtn"
+            type="button"
+            aria-expanded="true"
+            class="w-full flex items-center justify-between text-left mb-3 group focus:outline-none"
+          >
+            <h2 class="text-[13px] font-semibold tracking-tight text-[#1d1d1f]">
+              Khoảng giá
+            </h2>
+            <svg
+              id="togglePriceSectionIcon"
+              class="w-4 h-4 text-[#86868b] group-hover:text-[#1d1d1f] transition-transform duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+
+          <div id="priceFilterBody" class="space-y-3">
+            <!-- Compact Checkbox Preset List -->
+            <div class="space-y-0.5" id="ckPriceCheckboxList">
+              <button
+                type="button"
+                data-price-preset="all"
+                data-min="0"
+                data-max="3000000"
+                class="w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg bg-[#f5f5f7] transition-colors group"
+              >
+                <span data-check-box class="w-4 h-4 rounded-[5px] border border-[#1d1d1f] bg-[#1d1d1f] text-white flex items-center justify-center shrink-0 transition-colors">
+                  <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span data-check-label class="font-semibold text-[#1d1d1f]">Tất cả</span>
+              </button>
+
+              <button
+                type="button"
+                data-price-preset="under-150"
+                data-min="0"
+                data-max="150000"
+                class="w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg hover:bg-[#f5f5f7] transition-colors group"
+              >
+                <span data-check-box class="w-4 h-4 rounded-[5px] border border-[#c7c7cc] bg-white text-transparent flex items-center justify-center shrink-0 group-hover:border-[#86868b] transition-colors">
+                  <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span data-check-label class="font-normal text-[#424245]">Dưới 150.000₫</span>
+              </button>
+
+              <button
+                type="button"
+                data-price-preset="150-350"
+                data-min="150000"
+                data-max="350000"
+                class="w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg hover:bg-[#f5f5f7] transition-colors group"
+              >
+                <span data-check-box class="w-4 h-4 rounded-[5px] border border-[#c7c7cc] bg-white text-transparent flex items-center justify-center shrink-0 group-hover:border-[#86868b] transition-colors">
+                  <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span data-check-label class="font-normal text-[#424245]">150.000₫ – 350.000₫</span>
+              </button>
+
+              <button
+                type="button"
+                data-price-preset="350-600"
+                data-min="350000"
+                data-max="600000"
+                class="w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg hover:bg-[#f5f5f7] transition-colors group"
+              >
+                <span data-check-box class="w-4 h-4 rounded-[5px] border border-[#c7c7cc] bg-white text-transparent flex items-center justify-center shrink-0 group-hover:border-[#86868b] transition-colors">
+                  <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span data-check-label class="font-normal text-[#424245]">350.000₫ – 600.000₫</span>
+              </button>
+
+              <button
+                type="button"
+                data-price-preset="over-600"
+                data-min="600000"
+                data-max="3000000"
+                class="w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg hover:bg-[#f5f5f7] transition-colors group"
+              >
+                <span data-check-box class="w-4 h-4 rounded-[5px] border border-[#c7c7cc] bg-white text-transparent flex items-center justify-center shrink-0 group-hover:border-[#86868b] transition-colors">
+                  <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span data-check-label class="font-normal text-[#424245]">Trên 600.000₫</span>
+              </button>
+            </div>
+
+            <!-- Custom Price Range Inputs + Dual Slider -->
+            <div class="pt-3 border-t border-[#f0f0f3] space-y-2.5">
+              <p class="text-[11px] font-medium text-[#6e6e73]">
+                Hoặc nhập khoảng giá tùy chọn
+              </p>
+
+              <div class="flex items-center gap-1.5">
+                <label class="flex-1 min-w-0 flex items-center justify-end rounded-lg bg-[#f5f5f7] border border-transparent focus-within:bg-white focus-within:border-[#1d1d1f] px-2.5 py-1.5 cursor-text transition-all">
+                  <input
+                    id="ckPriceInputMin"
+                    type="text"
+                    inputmode="numeric"
+                    value="0"
+                    aria-label="Giá tối thiểu (nghìn đồng)"
+                    class="w-full min-w-0 text-right text-xs font-semibold text-[#1d1d1f] bg-transparent focus:outline-none tabular-nums"
+                  />
+                  <span class="text-[10.5px] text-[#86868b] font-normal select-none shrink-0 ml-0.5">.000₫</span>
+                </label>
+
+                <span class="text-xs font-medium text-[#86868b] select-none shrink-0">–</span>
+
+                <label class="flex-1 min-w-0 flex items-center justify-end rounded-lg bg-[#f5f5f7] border border-transparent focus-within:bg-white focus-within:border-[#1d1d1f] px-2.5 py-1.5 cursor-text transition-all">
+                  <input
+                    id="ckPriceInputMax"
+                    type="text"
+                    inputmode="numeric"
+                    value="3.000"
+                    aria-label="Giá tối đa (nghìn đồng)"
+                    class="w-full min-w-0 text-right text-xs font-semibold text-[#1d1d1f] bg-transparent focus:outline-none tabular-nums"
+                  />
+                  <span class="text-[10.5px] text-[#86868b] font-normal select-none shrink-0 ml-0.5">.000₫</span>
+                </label>
+              </div>
+
+              <div class="px-2 pt-2 pb-1">
+                <div
+                  id="ckSliderRail"
+                  class="relative w-full h-1 rounded-full bg-[#e5e5ea] cursor-pointer select-none touch-none"
+                >
+                  <div
+                    id="ckSliderFill"
+                    class="absolute top-0 bottom-0 bg-[#1d1d1f] rounded-full"
+                    style="left: 0%; right: 0%;"
+                  ></div>
+
+                  <button
+                    id="ckThumbMin"
+                    type="button"
+                    aria-label="Kéo chỉnh giá tối thiểu"
+                    class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-[3px] border-[#1d1d1f] shadow-[0_1px_4px_rgba(0,0,0,0.22)] hover:scale-110 active:scale-115 cursor-grab active:cursor-grabbing focus:outline-none z-10 transition-transform"
+                    style="left: 0%;"
+                  ></button>
+
+                  <button
+                    id="ckThumbMax"
+                    type="button"
+                    aria-label="Kéo chỉnh giá tối đa"
+                    class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-[3px] border-[#1d1d1f] shadow-[0_1px_4px_rgba(0,0,0,0.22)] hover:scale-110 active:scale-115 cursor-grab active:cursor-grabbing focus:outline-none z-10 transition-transform"
+                    style="left: 100%;"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              // Collapse / Expand Category section
+              const catToggleBtn = document.getElementById('toggleCategorySectionBtn');
+              const catToggleIcon = document.getElementById('toggleCategorySectionIcon');
+              const catListEl = document.getElementById('catalogCategoryList');
+              catToggleBtn?.addEventListener('click', () => {
+                const hidden = catListEl.classList.toggle('hidden');
+                catToggleIcon?.classList.toggle('rotate-180', hidden);
+                catToggleBtn.setAttribute('aria-expanded', String(!hidden));
+              });
+
+              // Price Range Controls (synced cleanly with app.js unified filter engine)
+              const MAX_LIMIT = 3000000;
+              const STEP = 50000;
+              let minPrice = 0;
+              let maxPrice = MAX_LIMIT;
+              let activePreset = 'all';
+
+              const toggleBtn = document.getElementById('togglePriceSectionBtn');
+              const toggleIcon = document.getElementById('togglePriceSectionIcon');
+              const bodyEl = document.getElementById('priceFilterBody');
+              const listEl = document.getElementById('ckPriceCheckboxList');
+              const inputMin = document.getElementById('ckPriceInputMin');
+              const inputMax = document.getElementById('ckPriceInputMax');
+              const rail = document.getElementById('ckSliderRail');
+              const fill = document.getElementById('ckSliderFill');
+              const thumbMin = document.getElementById('ckThumbMin');
+              const thumbMax = document.getElementById('ckThumbMax');
+
+              toggleBtn?.addEventListener('click', () => {
+                const hidden = bodyEl.classList.toggle('hidden');
+                toggleIcon?.classList.toggle('rotate-180', hidden);
+                toggleBtn.setAttribute('aria-expanded', String(!hidden));
+              });
+
+              function renderPriceUI(skipInputText = false) {
+                const leftPct = Math.max(0, Math.min(100, (minPrice / MAX_LIMIT) * 100));
+                const rightPct = Math.max(0, Math.min(100, 100 - (maxPrice / MAX_LIMIT) * 100));
+                if (fill) {
+                  fill.style.left = leftPct + '%';
+                  fill.style.right = rightPct + '%';
+                }
+                if (thumbMin) thumbMin.style.left = leftPct + '%';
+                if (thumbMax) thumbMax.style.left = (100 - rightPct) + '%';
+
+                if (!skipInputText) {
+                  if (inputMin) inputMin.value = Math.round(minPrice / 1000).toLocaleString('vi-VN');
+                  if (inputMax) inputMax.value = Math.round(maxPrice / 1000).toLocaleString('vi-VN');
+                }
+
+                if (minPrice === 0 && maxPrice === MAX_LIMIT) activePreset = 'all';
+                else if (minPrice === 0 && maxPrice === 150000) activePreset = 'under-150';
+                else if (minPrice === 150000 && maxPrice === 350000) activePreset = '150-350';
+                else if (minPrice === 350000 && maxPrice === 600000) activePreset = '350-600';
+                else if (minPrice === 600000 && maxPrice === MAX_LIMIT) activePreset = 'over-600';
+                else activePreset = 'custom';
+
+                listEl?.querySelectorAll('[data-price-preset]').forEach((btn) => {
+                  const isChecked = btn.dataset.pricePreset === activePreset;
+                  const box = btn.querySelector('[data-check-box]');
+                  const lbl = btn.querySelector('[data-check-label]');
+                  btn.className = isChecked
+                    ? 'w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg bg-[#f5f5f7] transition-colors group'
+                    : 'w-full flex items-center gap-2.5 px-2 py-1.5 text-[12.5px] text-left rounded-lg hover:bg-[#f5f5f7] transition-colors group';
+                  if (box) {
+                    box.className = isChecked
+                      ? 'w-4 h-4 rounded-[5px] border border-[#1d1d1f] bg-[#1d1d1f] text-white flex items-center justify-center shrink-0 transition-colors'
+                      : 'w-4 h-4 rounded-[5px] border border-[#c7c7cc] bg-white text-transparent flex items-center justify-center shrink-0 group-hover:border-[#86868b] transition-colors';
+                  }
+                  if (lbl) {
+                    lbl.className = isChecked ? 'font-semibold text-[#1d1d1f]' : 'font-normal text-[#424245]';
+                  }
+                });
+              }
+
+              function notifyPriceChange() {
+                document.dispatchEvent(
+                  new CustomEvent('ck:price-range-change', {
+                    detail: { min: minPrice, max: maxPrice, maxLimit: MAX_LIMIT, preset: activePreset }
+                  })
+                );
+              }
+
+              listEl?.addEventListener('click', (e) => {
+                const btn = e.target.closest('[data-price-preset]');
+                if (!btn) return;
+                const preset = btn.dataset.pricePreset;
+                if (activePreset === preset && preset !== 'all') {
+                  minPrice = 0;
+                  maxPrice = MAX_LIMIT;
+                } else {
+                  minPrice = Number(btn.dataset.min) || 0;
+                  maxPrice = Number(btn.dataset.max) || MAX_LIMIT;
+                }
+                renderPriceUI(false);
+                notifyPriceChange();
+              });
+
+              function handleInputTyping() {
+                const rawMin = Number(String(inputMin.value).replace(/\D/g, '')) * 1000;
+                const rawMax = Number(String(inputMax.value).replace(/\D/g, '')) * 1000;
+                minPrice = Math.max(0, Math.min(rawMin, MAX_LIMIT));
+                maxPrice = rawMax > minPrice ? Math.min(rawMax, MAX_LIMIT) : MAX_LIMIT;
+                renderPriceUI(true);
+                notifyPriceChange();
+              }
+
+              inputMin?.addEventListener('input', handleInputTyping);
+              inputMax?.addEventListener('input', handleInputTyping);
+              inputMin?.addEventListener('blur', () => renderPriceUI(false));
+              inputMax?.addEventListener('blur', () => renderPriceUI(false));
+
+              let activeThumb = null;
+              function updateFromPointer(clientX) {
+                if (!rail || !activeThumb) return;
+                const rect = rail.getBoundingClientRect();
+                const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+                const snapped = Math.round((ratio * MAX_LIMIT) / STEP) * STEP;
+                if (activeThumb === 'min') {
+                  minPrice = Math.min(snapped, maxPrice - STEP);
+                } else {
+                  maxPrice = Math.max(snapped, minPrice + STEP);
+                }
+                renderPriceUI(false);
+                notifyPriceChange();
+              }
+
+              thumbMin?.addEventListener('pointerdown', (e) => {
+                e.preventDefault();
+                activeThumb = 'min';
+                thumbMin.setPointerCapture(e.pointerId);
+              });
+              thumbMax?.addEventListener('pointerdown', (e) => {
+                e.preventDefault();
+                activeThumb = 'max';
+                thumbMax.setPointerCapture(e.pointerId);
+              });
+              window.addEventListener('pointermove', (e) => {
+                if (!activeThumb) return;
+                updateFromPointer(e.clientX);
+              });
+              window.addEventListener('pointerup', () => {
+                activeThumb = null;
+              });
+
+              rail?.addEventListener('click', (e) => {
+                if (e.target === thumbMin || e.target === thumbMax) return;
+                const rect = rail.getBoundingClientRect();
+                const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+                const clickedVal = Math.round((ratio * MAX_LIMIT) / STEP) * STEP;
+                if (Math.abs(clickedVal - minPrice) <= Math.abs(clickedVal - maxPrice)) {
+                  minPrice = Math.min(clickedVal, maxPrice - STEP);
+                } else {
+                  maxPrice = Math.max(clickedVal, minPrice + STEP);
+                }
+                renderPriceUI(false);
+                notifyPriceChange();
+              });
+
+              // Sync on reset or external URL param initialization
+              document.addEventListener('ck:price-range-reset', () => {
+                minPrice = 0;
+                maxPrice = MAX_LIMIT;
+                renderPriceUI(false);
+              });
+
+              // Initialize from URL ?price=... if present
+              const urlPrice = new URLSearchParams(window.location.search).get('price');
+              if (urlPrice) {
+                const presetBtn = listEl?.querySelector(`[data-price-preset="${urlPrice}"]`);
+                if (presetBtn) {
+                  minPrice = Number(presetBtn.dataset.min) || 0;
+                  maxPrice = Number(presetBtn.dataset.max) || MAX_LIMIT;
+                  renderPriceUI(false);
+                  notifyPriceChange();
+                }
+              }
+            });
+          </script>
+        </div>
+
+        <!-- Group 3: Apple Education Privilege Callout (Compact) -->
+        <div class="rounded-2xl bg-[#f5f5f7] p-4 space-y-2">
+          <p class="as-eyebrow text-[11px] font-semibold text-[#b64400] tracking-tight">
+            Trợ giá Giáo dục
+          </p>
+          <h3 class="text-[13px] font-semibold text-[#1d1d1f] leading-snug tracking-[-0.01em]">
+            Tiết kiệm thêm 15% với email .edu.vn
+          </h3>
+          <p class="text-[11.5px] text-[#6e6e73] leading-relaxed">
+            Xác thực một lần để mở khóa mã EDU15VIP giảm trực tiếp không cần đơn tối thiểu.
+          </p>
+          <div class="pt-1">
+            <a href="{{ "/ma-giam-gia/" | relURL }}" class="as-pill-blue inline-flex items-center justify-center w-full rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white py-2 px-3.5 text-xs font-medium transition-colors">
+              Nhận ưu đãi sinh viên ›
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT PRODUCT SHELF GRID -->
+      <div class="lg:col-span-9">
+        <!-- Apple Store Clean Toolbar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-6 border-b border-[#d2d2d7]/70">
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <span id="catalogResultCount" class="text-xs sm:text-[13px] font-medium text-[#6e6e73]">
+              Hiển thị {{ len hugo.Data.products }} / {{ len hugo.Data.products }} sản phẩm
+            </span>
+            <span id="activeFilterBadge" class="hidden rounded-full bg-[#1d1d1f] text-white text-[11px] font-medium px-3 py-1">
+              Đang lọc
+            </span>
+            <button id="resetFilterBtn" type="button" class="hidden text-xs font-medium text-[#0066cc] hover:underline">
+              Xóa bộ lọc
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3 self-start sm:self-auto">
+            <!-- Desktop Column Switcher -->
+            <div class="hidden xl:flex items-center rounded-full bg-white shadow-[0_1px_4px_rgba(0,0,0,0.06)] p-1">
+              <button id="gridCols2Btn" type="button" title="Hiển thị 2 cột lớn" class="rounded-full px-3 py-1 text-[11px] font-medium text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">
+                2 cột
+              </button>
+              <button id="gridCols3Btn" type="button" title="Hiển thị 3 cột tiêu chuẩn" class="rounded-full px-3 py-1 text-[11px] font-medium bg-[#1d1d1f] text-white transition-colors">
+                3 cột
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <label for="sortSelect" class="text-xs text-[#6e6e73] shrink-0">Sắp xếp:</label>
+              <select id="sortSelect" class="rounded-full bg-white border border-[#d2d2d7] hover:border-[#86868b] shadow-[0_1px_3px_rgba(0,0,0,0.04)] text-xs font-medium text-[#1d1d1f] py-2 px-4 focus:outline-none focus:border-[#0071e3] transition-colors">
+                <option value="featured">Phổ biến nhất</option>
+                <option value="price-asc">Giá: Thấp đến Cao</option>
+                <option value="price-desc">Giá: Cao đến Thấp</option>
+                <option value="discount-desc">Tiết kiệm nhiều nhất</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full 12-Product Apple Store 3D Flashcard Grid Floating Directly on #F5F5F7 -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          {{ range $index, $product := hugo.Data.products }}
+          <article
+            class="product-card ck-flashcard uniqlo-card group"
+            data-id="{{ $product.id }}"
+            data-name="{{ $product.name }}"
+            data-category="{{ $product.category }}"
+            data-extra-cat="{{ $product.extraCategories }}"
+            data-sub-category="{{ $product.subCategory }}"
+            data-specs="{{ $product.specs }}"
+            data-price="{{ $product.price }}"
+            data-discount="{{ $product.discountPercent }}"
+            data-featured="true"
+            data-index="{{ $index }}"
+            data-image="{{ $product.image | relURL }}"
+          >
+            <div class="ck-flashcard-inner !rounded-[24px] !shadow-[2px_4px_12px_rgba(0,0,0,0.05)] group-hover:!shadow-[2px_10px_26px_rgba(0,0,0,0.09)] transition-shadow duration-300">
+
+              <!-- FRONT FACE: APPLE STORE WHITE PRODUCT TILE -->
+              <div class="ck-flashcard-face ck-flashcard-front !rounded-[24px] !border-0 bg-white">
+                <div>
+                  <!-- Subtle Top Bar: subCategory + Flip Pill -->
+                  <div class="px-5 pt-4 pb-1 flex items-center justify-between gap-2">
+                    <span class="text-[11.5px] font-medium text-[#6e6e73] truncate">
+                      {{ $product.subCategory }}
+                    </span>
+                    <button
+                      type="button"
+                      data-flip-card
+                      class="shrink-0 rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] px-3 py-1 text-[11px] font-medium transition-colors"
+                    >
+                      Lật ↻
+                    </button>
+                  </div>
+
+                  <!-- Clean Square Product Photo -->
+                  <div class="px-5 pt-2">
+                    <div class="relative aspect-square w-full rounded-[18px] bg-[#f5f5f7] overflow-hidden cursor-pointer" data-flip-card title="Bấm để lật xem thông số chi tiết">
+                      <img
+                        src="{{ $product.image | relURL }}"
+                        alt="{{ $product.name }}"
+                        loading="lazy"
+                        class="w-full h-full object-cover object-center uniqlo-card-img"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Subtle Apple Finish Swatch Dots -->
+                  <div class="flex items-center justify-center gap-1.5 pt-3.5 pb-1" aria-hidden="true">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#2e2e30] shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#e3e4e5] shadow-[inset_0_1px_2px_rgba(0,0,0,0.18)]"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#c8d0d8] shadow-[inset_0_1px_2px_rgba(0,0,0,0.18)]"></span>
+                  </div>
+
+                  <!-- Apple Eyebrow + Prominent Bold Product Name ABOVE Specs + VND Price -->
+                  <div class="px-5 pt-2 pb-3">
+                    <p class="as-eyebrow text-[11.5px] font-semibold text-[#b64400] tracking-tight mb-1">
+                      {{ $product.badge }} • Tiết kiệm {{ $product.discountPercent }}%
+                    </p>
+                    <h3
+                      data-quick-view="{{ $product.id }}"
+                      class="text-[16px] sm:text-[17px] font-semibold text-[#1d1d1f] leading-snug tracking-[-0.015em] group-hover:text-[#0066cc] transition-colors cursor-pointer line-clamp-2 min-h-[2.7rem] mb-1.5"
+                    >
+                      {{ $product.name }}
+                    </h3>
+                    <p class="text-[12px] font-normal text-[#6e6e73] leading-relaxed line-clamp-2 mb-3">
+                      {{ $product.specs }}
+                    </p>
+                    <div class="flex items-baseline gap-2 pt-2 border-t border-[#f5f5f7]">
+                      <span class="text-[16px] font-semibold text-[#1d1d1f] tracking-tight">
+                        {{ lang.FormatNumber 0 $product.price }}₫
+                      </span>
+                      <span class="text-xs text-[#86868b] line-through">
+                        {{ lang.FormatNumber 0 $product.originalPrice }}₫
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Apple Store Pill Actions -->
+                <div class="px-5 pb-5 pt-1 flex items-center gap-2">
+                  <button
+                    type="button"
+                    data-quick-view="{{ $product.id }}"
+                    class="as-pill-outline rounded-full border border-[#d2d2d7] hover:border-[#86868b] bg-white hover:bg-[#f5f5f7] text-[#1d1d1f] font-medium text-xs py-2 px-4 transition-colors shrink-0"
+                  >
+                    Xem
+                  </button>
+                  <button
+                    type="button"
+                    data-add-cart="{{ $product.id }}"
+                    class="as-pill-blue flex-1 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium text-xs py-2 px-4 transition-colors flex items-center justify-center gap-1"
+                  >
+                    <span>+ Thêm giỏ</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- BACK FACE: CLEAN APPLE SPEC SHEET -->
+              <div class="ck-flashcard-face ck-flashcard-back !rounded-[24px] !border-0 !bg-white !bg-none">
+                <div>
+                  <div class="px-5 pt-4 pb-3 border-b border-[#d2d2d7]/60 flex items-center justify-between gap-2">
+                    <span class="text-[11.5px] font-semibold text-[#6e6e73] truncate">
+                      {{ $product.subCategory }}
+                    </span>
+                    <button
+                      type="button"
+                      data-flip-card
+                      class="shrink-0 rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] px-3 py-1 text-[11px] font-medium transition-colors"
+                    >
+                      ↺ Lật lại
+                    </button>
+                  </div>
+
+                  <div class="p-5 space-y-3">
+                    <div>
+                      <p class="text-[11px] font-semibold text-[#b64400] mb-0.5">Thông số kỹ thuật</p>
+                      <h4 class="text-sm font-semibold text-[#1d1d1f] leading-snug line-clamp-2">{{ $product.name }}</h4>
+                      <p class="text-[11.5px] text-[#6e6e73] mt-1 line-clamp-2">{{ $product.specs }}</p>
+                    </div>
+
+                    <div class="rounded-[16px] bg-[#f5f5f7] p-3.5">
+                      <ul class="space-y-2 text-[11.5px] text-[#1d1d1f] leading-snug">
+                        {{ range $product.highlights }}
+                        <li class="flex items-start gap-2">
+                          <span class="text-[#0071e3] font-semibold shrink-0">✓</span>
+                          <span class="line-clamp-2">{{ . }}</span>
+                        </li>
+                        {{ end }}
+                      </ul>
+                    </div>
+
+                    <div class="rounded-[14px] bg-[#f5f5f7] px-3.5 py-2.5 text-[11px] text-[#6e6e73] font-medium flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#0071e3] shrink-0"></span>
+                      <span class="truncate">Bảo hành: <strong class="text-[#1d1d1f] font-semibold">{{ $product.warranty | default "1 đổi 1 trong 30 ngày" }}</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-5 pb-5 pt-3 border-t border-[#d2d2d7]/60 bg-white flex items-center justify-between gap-2">
+                  <span class="text-sm font-semibold text-[#1d1d1f]">{{ lang.FormatNumber 0 $product.price }}₫</span>
+                  <div class="flex items-center gap-2">
+                    <button type="button" data-quick-view="{{ $product.id }}" class="rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] px-3.5 py-1.5 text-xs font-medium transition-colors">
+                      Xem
+                    </button>
+                    <button type="button" data-add-cart="{{ $product.id }}" class="as-pill-blue rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white px-4 py-1.5 text-xs font-medium transition-colors">
+                      + Giỏ
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+          {{ end }}
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyProductState" class="hidden rounded-[24px] bg-white shadow-[2px_4px_12px_rgba(0,0,0,0.05)] p-12 text-center my-4">
+          <p class="text-lg font-semibold text-[#1d1d1f] mb-2">Không tìm thấy sản phẩm phù hợp với bộ lọc hiện tại.</p>
+          <p class="text-xs sm:text-sm text-[#6e6e73] mb-6 max-w-md mx-auto">Hãy thử chọn lại khoảng giá hoặc đặt lại bộ lọc để khám phá toàn bộ {{ len hugo.Data.products }} sản phẩm tại CampusKit.</p>
+          <button id="emptyResetBtn" type="button" class="as-pill-blue rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs sm:text-sm font-medium px-6 py-3 transition-colors">
+            Đặt lại tất cả bộ lọc
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{- partial "value-strip.html" . -}}
+{{ end }}

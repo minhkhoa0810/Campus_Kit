@@ -1,0 +1,307 @@
+{{ define "main" }}
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-14 space-y-6">
+
+  <!-- 1. Compact Visual Hero Bento -->
+  <div class="ck-section-box p-7 sm:p-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <div class="inline-flex items-center gap-2 rounded-full bg-[#f5f5f7] border border-black/[0.06] pl-1.5 pr-3.5 py-1">
+          <img src="{{ "/images/logo-icon.png" | relURL }}" alt="CampusKit" class="w-5 h-5 rounded-[5px] shrink-0" />
+          <span class="text-[11px] font-semibold tracking-wide text-[#1d1d1f] uppercase">
+            26TNT1 • ĐH Khoa học Tự nhiên – ĐHQG-HCM
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-[42px] font-semibold tracking-[-0.03em] leading-[1.1] text-[#1d1d1f]">
+          CampusKit. <span class="text-[#6e6e73]">Đủ Đồ Dùng, Vào Học Là Chiến!</span>
+        </h1>
+
+        <p class="text-[15px] text-[#424245] leading-relaxed max-w-xl">
+          Startup sinh viên gom trọn những món đồ học tập thiết yếu vào một nơi — chọn nhanh trên điện thoại, giá hợp lý, nhận gọn tại trường.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a href="{{ "/san-pham/" | relURL }}" class="as-pill-blue inline-flex items-center gap-1.5 px-5 py-2.5 text-[13px] shadow-sm">
+            <span>Khám phá {{ len hugo.Data.products }} sản phẩm</span>
+            <span aria-hidden="true">›</span>
+          </a>
+          <a href="{{ "/combo/" | relURL }}" class="as-pill-outline">
+            <span>Xem Combo tiết kiệm ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Brand Emblem + 3 Compact Metrics -->
+      <div class="lg:col-span-5 space-y-3">
+        <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.05] p-5 flex items-center gap-4">
+          <img
+            src="{{ "/images/logo-icon.png" | relURL }}"
+            alt="Logo CampusKit"
+            class="w-16 h-16 rounded-[18px] shadow-[0_6px_18px_rgba(0,0,0,0.14)] shrink-0"
+          />
+          <div>
+            <p class="text-[11px] font-semibold uppercase tracking-wider text-[#0071e3]">Chúng mình là ai?</p>
+            <p class="text-[15px] font-semibold text-[#1d1d1f] leading-snug mt-0.5">Nhóm sinh viên lớp 26TNT1</p>
+            <p class="text-[12.5px] text-[#6e6e73] mt-0.5">Trường ĐH Khoa học Tự nhiên – ĐHQG-HCM</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2.5 text-center">
+          <div class="rounded-2xl bg-[#f5f5f7] p-3.5">
+            <p class="text-xl font-bold text-[#1d1d1f]">{{ len hugo.Data.products }}+</p>
+            <p class="text-[11px] text-[#6e6e73] mt-0.5">Món chọn lọc</p>
+          </div>
+          <div class="rounded-2xl bg-[#f5f5f7] p-3.5">
+            <p class="text-xl font-bold text-[#0071e3]">15%</p>
+            <p class="text-[11px] text-[#6e6e73] mt-0.5">Ưu đãi .edu.vn</p>
+          </div>
+          <div class="rounded-2xl bg-[#f5f5f7] p-3.5">
+            <p class="text-xl font-bold text-[#1d1d1f]">30 ngày</p>
+            <p class="text-[11px] text-[#6e6e73] mt-0.5">Đổi trả dễ dàng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Scannable Problem vs. Solution (2 Columns, Bullet-First) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <!-- Left: Vấn đề -->
+    <div class="ck-section-box p-7 flex flex-col justify-between space-y-5">
+      <div class="space-y-4">
+        <div>
+          <p class="as-eyebrow text-[#b64400]">VẤN ĐỀ THƯỜNG GẶP</p>
+          <h2 class="text-xl font-semibold tracking-[-0.02em] text-[#1d1d1f] mt-1">Mua rải rác, tới lúc cần mới tìm</h2>
+        </div>
+
+        <ul class="space-y-3 text-[14px] text-[#424245]">
+          <li class="flex items-start gap-2.5">
+            <span class="w-5 h-5 rounded-full bg-[#f5f5f7] text-[#b64400] text-[11px] font-bold inline-flex items-center justify-center shrink-0 mt-0.5">✕</span>
+            <span>Bút hết mực sát giờ kiểm tra, vở hết trang giữa buổi học.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="w-5 h-5 rounded-full bg-[#f5f5f7] text-[#b64400] text-[11px] font-bold inline-flex items-center justify-center shrink-0 mt-0.5">✕</span>
+            <span>Quên máy tính cầm tay ngày thi, chạy đi tìm lại không có sẵn.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="w-5 h-5 rounded-full bg-[#f5f5f7] text-[#b64400] text-[11px] font-bold inline-flex items-center justify-center shrink-0 mt-0.5">✕</span>
+            <span>Mua lẻ nhiều nơi vừa tốn thời gian, khó so giá, dễ dính hàng kém chất lượng.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right: Giải pháp -->
+    <div class="rounded-[28px] bg-[#1d1d1f] text-white p-7 shadow-[2px_4px_14px_rgba(0,0,0,0.12)] flex flex-col justify-between space-y-5">
+      <div class="space-y-4">
+        <div>
+          <p class="as-eyebrow text-[#66b2ff]">GIẢI PHÁP CAMPUSKIT</p>
+          <h2 class="text-xl font-semibold tracking-[-0.02em] text-white mt-1">Gom gọn mọi món cần vào một nơi</h2>
+        </div>
+
+        <ul class="space-y-3 text-[14px] text-white/85">
+          <li class="flex items-start gap-2.5">
+            <span class="w-5 h-5 rounded-full bg-[#0071e3] text-white text-[11px] font-bold inline-flex items-center justify-center shrink-0 mt-0.5">✓</span>
+            <span>Chọn sẵn đúng món sinh viên dùng thật, đóng gói gọn gàng.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="w-5 h-5 rounded-full bg-[#0071e3] text-white text-[11px] font-bold inline-flex items-center justify-center shrink-0 mt-0.5">✓</span>
+            <span>Giá hợp lý, có combo tiết kiệm &amp; giảm 15% cho email .edu.vn.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="w-5 h-5 rounded-full bg-[#0071e3] text-white text-[11px] font-bold inline-flex items-center justify-center shrink-0 mt-0.5">✓</span>
+            <span>Đặt nhanh trên điện thoại, nhận thuận tiện ngay tại trường.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl bg-white/10 border border-white/10 px-4 py-3 text-[13.5px] font-medium text-white">
+        “Bạn chỉ cần lo học, phần đồ dùng để tụi mình lo.”
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.5. How CampusKit Curates Products (4 Compact Standards) -->
+  <div class="ck-section-box p-6 sm:p-8 space-y-5">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+      <div>
+        <p class="as-eyebrow text-[#0071e3]">TIÊU CHUẨN CHỌN LỌC</p>
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f] mt-1">
+          Cách CampusKit chọn lọc sản phẩm
+        </h2>
+      </div>
+      <p class="text-[13px] text-[#6e6e73]">Ít mẫu hơn, nhưng món nào cũng dùng thật.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+      <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 space-y-2">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#dcebfb] text-[#005bb5] text-[12px] font-bold">01</span>
+        <h3 class="text-[14px] font-semibold text-[#1d1d1f]">Chuẩn học &amp; phòng thi</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">Chỉ giữ món dùng hằng ngày: máy tính chuẩn thi, vở chống lem, bút 2B.</p>
+      </div>
+
+      <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 space-y-2">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#e8e2f9] text-[#52437a] text-[12px] font-bold">02</span>
+        <h3 class="text-[14px] font-semibold text-[#1d1d1f]">Gọn bàn &amp; êm ái</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">Ưu tiên đồ tối giản, lắp không khoan tường, chuột phím êm không ồn.</p>
+      </div>
+
+      <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 space-y-2">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#e1f3ec] text-[#2d624f] text-[12px] font-bold">03</span>
+        <h3 class="text-[14px] font-semibold text-[#1d1d1f]">Rõ nguồn gốc, vừa ví</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">Loại hàng trôi nổi; thông số minh bạch, dễ so giá và có ưu đãi .edu.vn.</p>
+      </div>
+
+      <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 space-y-2">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-[#f9ead3] text-[#9a4b00] text-[12px] font-bold">04</span>
+        <h3 class="text-[14px] font-semibold text-[#1d1d1f]">Sát thực tế sinh viên</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">Chọn theo nhu cầu chạy deadline, ôn thi cuối kỳ và đổi trả 30 ngày.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Contact & 3 Pickup / Delivery Locations -->
+  <div class="ck-section-box p-6 sm:p-8 space-y-5">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+      <div>
+        <p class="as-eyebrow text-[#0071e3]">LIÊN HỆ &amp; GIAO NHẬN</p>
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f] mt-1">
+          Thông tin liên hệ &amp; 3 điểm giao nhận hàng
+        </h2>
+      </div>
+      <p class="text-[13px] text-[#6e6e73]">Hỗ trợ sinh viên 08:00 – 21:30 mỗi ngày</p>
+    </div>
+
+    <!-- Hotline & Email Strip -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+      <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#0071e3] shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-[#6e6e73]">Hotline hỗ trợ</p>
+          <p class="text-[14.5px] font-semibold text-[#1d1d1f] mt-0.5">{{ .Site.Params.hotline | default "1900 6868 (08:00 – 21:30 mỗi ngày)" }}</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#0071e3] shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-[#6e6e73]">Email liên hệ</p>
+          <p class="text-[14.5px] font-semibold text-[#1d1d1f] mt-0.5">{{ .Site.Params.email | default "hello@campuskit.vn" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Delivery / Pickup Locations -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+      <div class="rounded-2xl bg-white border border-black/[0.07] p-4 space-y-1.5">
+        <span class="inline-flex items-center rounded-full bg-[#dcebfb] text-[#005bb5] text-[11px] font-semibold px-2.5 py-0.5">Điểm 01</span>
+        <h3 class="text-[14.5px] font-semibold text-[#1d1d1f]">CS1 – ĐH Khoa học Tự nhiên</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">227 Nguyễn Văn Cừ, Phường Chợ Quán, TP. Hồ Chí Minh</p>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-black/[0.07] p-4 space-y-1.5">
+        <span class="inline-flex items-center rounded-full bg-[#e1f3ec] text-[#2d624f] text-[11px] font-semibold px-2.5 py-0.5">Điểm 02</span>
+        <h3 class="text-[14.5px] font-semibold text-[#1d1d1f]">Ký túc xá Khu A – ĐHQG-HCM</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">Đường Tạ Quang Bửu, Khu đô thị ĐHQG-HCM, Khu phố 33, Phường Linh Xuân, TP. Hồ Chí Minh</p>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-black/[0.07] p-4 space-y-1.5">
+        <span class="inline-flex items-center rounded-full bg-[#f9ead3] text-[#9a4b00] text-[11px] font-semibold px-2.5 py-0.5">Điểm 03</span>
+        <h3 class="text-[14.5px] font-semibold text-[#1d1d1f]">Ký túc xá Khu B – ĐHQG-HCM</h3>
+        <p class="text-[12.5px] text-[#424245] leading-relaxed">Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, TP. Hồ Chí Minh</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Team Members Section (1 + 4 Hierarchical Card Layout) -->
+  <div class="ck-section-box p-7 sm:p-10 space-y-6">
+    <div class="text-center space-y-1.5">
+      <p class="as-eyebrow text-[#0071e3]">ĐỘI NGŨ THỰC HIỆN • 26TNT1</p>
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-[-0.025em] text-[#1d1d1f]">Thành viên nhóm</h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-3.5">
+      <!-- Top Featured Row: Team Leader -->
+      <div class="rounded-2xl bg-white border border-black/[0.08] shadow-[0_2px_10px_rgba(0,0,0,0.04)] p-4 sm:p-5 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-[14px] bg-[#1d1d1f] text-white font-semibold text-[15px] tracking-tight flex items-center justify-center shrink-0 select-none">
+          GB
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 min-w-0">
+          <h3 class="text-[16px] sm:text-[17px] font-semibold text-[#1d1d1f] tracking-[-0.015em]">
+            Nguyễn Ngọc Gia Bảo
+          </h3>
+          <span class="inline-flex items-center rounded-full bg-[#0071e3] text-white text-[11.5px] font-medium px-3 py-1 leading-none">
+            Trưởng nhóm
+          </span>
+        </div>
+      </div>
+
+      <!-- Bottom 2x2 Balanced Grid: 4 Core Members -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-[13px] bg-[#55555a] text-white font-semibold text-[14px] tracking-tight flex items-center justify-center shrink-0 select-none">
+            MK
+          </div>
+          <div class="min-w-0 space-y-1.5">
+            <h3 class="text-[15px] font-semibold text-[#1d1d1f] leading-snug">Trần Minh Khang</h3>
+            <span class="inline-flex items-center rounded-full bg-[#dcebfb] text-[#005bb5] text-[11.5px] font-medium px-2.5 py-0.5">
+              Lập trình Hugo
+            </span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-[13px] bg-[#55555a] text-white font-semibold text-[14px] tracking-tight flex items-center justify-center shrink-0 select-none">
+            PT
+          </div>
+          <div class="min-w-0 space-y-1.5">
+            <h3 class="text-[15px] font-semibold text-[#1d1d1f] leading-snug">Trần Phúc Thịnh</h3>
+            <span class="inline-flex items-center rounded-full bg-[#dcebfb] text-[#005bb5] text-[11.5px] font-medium px-2.5 py-0.5">
+              Lập trình Hugo
+            </span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-[13px] bg-[#55555a] text-white font-semibold text-[14px] tracking-tight flex items-center justify-center shrink-0 select-none">
+            TT
+          </div>
+          <div class="min-w-0 space-y-1.5">
+            <h3 class="text-[15px] font-semibold text-[#1d1d1f] leading-snug">Đoàn Cao Ngọc Thiên Trí</h3>
+            <span class="inline-flex items-center rounded-full bg-[#f9ead3] text-[#9a4b00] text-[11.5px] font-medium px-2.5 py-0.5">
+              Thiết kế poster
+            </span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-[13px] bg-[#55555a] text-white font-semibold text-[14px] tracking-tight flex items-center justify-center shrink-0 select-none">
+            MK
+          </div>
+          <div class="min-w-0 space-y-1.5">
+            <h3 class="text-[15px] font-semibold text-[#1d1d1f] leading-snug">Trương Minh Khoa</h3>
+            <span class="inline-flex items-center rounded-full bg-[#f9ead3] text-[#9a4b00] text-[11.5px] font-medium px-2.5 py-0.5">
+              Thiết kế poster
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Project Disclaimer Bar -->
+      <div class="rounded-xl bg-[#f5f5f7] border border-black/[0.05] px-4 py-2.5 flex items-center justify-center gap-2 text-[12px] text-[#6e6e73] text-center">
+        <span class="w-4 h-4 rounded-full border border-[#86868b] text-[#6e6e73] text-[10px] font-semibold inline-flex items-center justify-center shrink-0" aria-hidden="true">i</span>
+        <span>Website này là sản phẩm của đồ án môn học. Mọi đơn hàng và thanh toán đều là mô phỏng.</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+{{ end }}

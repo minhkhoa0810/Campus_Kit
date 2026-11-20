@@ -1,0 +1,103 @@
+baseURL = "https://campuskit.vn/"
+locale = "vi-VN"
+title = "CampusKit — Đủ Đồ Dùng, Vào Học Là Chiến!"
+defaultContentLanguage = "vi"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  brandName = "CampusKit"
+  brandSub = "Minimal Study Gear"
+  slogan = "Đủ Đồ Dùng, Vào Học Là Chiến!"
+  description = "Bộ sưu tập dụng cụ học tập và thiết bị bàn học tối giản chuẩn Nhật Bản. Tối ưu diện tích bàn học ký túc xá, tăng sự tập trung cho mùa thi cuối kỳ."
+  promoCode = "SINHVIEN11"
+  promoBanner = "MIỄN PHÍ VẬN CHUYỂN KÝ TÚC XÁ CHO ĐƠN TỪ 199.000₫ — NHẬP MÃ SINHVIEN11 GIẢM THÊM 15%"
+  address = "227 Nguyễn Văn Cừ, Phường Chợ Quán, TP. Hồ Chí Minh (CS1 – ĐH Khoa học Tự nhiên)"
+  hotline = "1900 6868 (08:00 – 21:30 mỗi ngày)"
+  email = "hello@campuskit.vn"
+
+  [params.hero]
+    collectionTag = "WINTER EXAM COLLECTION • 2026"
+    badge = "CAMPUS SPECIAL"
+    badgeSub = "Dành riêng cho Sinh viên"
+    bannerImage = "/images/hero-banner.jpg"
+    countdownTitle = "Ưu đãi tháng 11 - Săn sale đón kỳ thi"
+    discountUpTo = "Lên đến 35%"
+
+# =============================================================================
+# 1. MENU ĐIỀU HƯỚNG CÁC TRANG CHÍNH (.Site.Menus.main)
+# =============================================================================
+[[menu.main]]
+  name = "Trang Chủ"
+  identifier = "home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Sản Phẩm"
+  identifier = "products"
+  url = "/san-pham/"
+  weight = 2
+
+[[menu.main]]
+  name = "Mã Giảm Giá"
+  identifier = "vouchers"
+  url = "/ma-giam-gia/"
+  weight = 3
+
+[[menu.main]]
+  name = "Công Cụ Học Tập"
+  identifier = "tools"
+  url = "/cong-cu/"
+  weight = 4
+
+[[menu.main]]
+  name = "Combo"
+  identifier = "combo"
+  url = "/combo/"
+  weight = 5
+
+[[menu.main]]
+  name = "Tra Cứu Đơn"
+  identifier = "tracking"
+  url = "/tra-cuu/"
+  weight = 6
+
+[[menu.main]]
+  name = "Về CampusKit"
+  identifier = "about"
+  url = "/gioi-thieu/"
+  weight = 7
+
+# =============================================================================
+# 2. MENU LỌC DANH MỤC SẢN PHẨM TRÊN TRANG CHỦ (.Site.Menus.categories)
+# =============================================================================
+[[menu.categories]]
+  name = "Tất cả"
+  identifier = "all"
+  url = "#featured-products"
+  weight = 1
+
+[[menu.categories]]
+  name = "Dụng cụ viết"
+  identifier = "Stationery"
+  url = "#featured-products"
+  weight = 2
+
+[[menu.categories]]
+  name = "Văn phòng phẩm"
+  identifier = "Workspace"
+  url = "#featured-products"
+  weight = 3
+
+[[menu.categories]]
+  name = "Tiện ích góc học tập"
+  identifier = "Tiện ích không gian"
+  url = "#featured-products"
+  weight = 4
+
+[[menu.categories]]
+  name = "Thiết bị học tập"
+  identifier = "Năng suất"
+  url = "#featured-products"
+  weight = 5
+

@@ -1,0 +1,173 @@
+<!-- CAMPUSKIT STOREFRONT HERO: CLEAR BRAND + SLOGAN + USP + VISUAL PRODUCT SHOWCASE + CATEGORY RIBBON -->
+<section aria-label="Cửa hàng CampusKit">
+  <!-- Row 1: 2-Column Positioning Hero -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-6 sm:pb-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-center">
+
+      <!-- Left Column (7/12): Brand Name, Slogan, What We Sell, CTAs & 3 USPs -->
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 rounded-full bg-white border border-black/[0.07] shadow-[0_2px_8px_rgba(0,0,0,0.05)] pl-1.5 pr-3.5 py-1">
+          <img
+            src="{{ "/images/logo-icon.png" | relURL }}"
+            alt="CampusKit"
+            class="w-5 h-5 rounded-[6px] shrink-0"
+          />
+          <span class="text-[11px] font-semibold tracking-wide text-[#1d1d1f] uppercase">
+            Văn phòng phẩm &amp; Thiết bị bàn học sinh viên
+          </span>
+        </div>
+
+        <div class="space-y-3">
+          <h1 class="text-4xl sm:text-5xl lg:text-[50px] font-semibold tracking-[-0.03em] leading-[1.08]">
+            <span class="text-[#1d1d1f]">{{ .Site.Params.brandName | default "CampusKit" }}.</span>
+            <span class="text-[#6e6e73] block sm:inline">{{ .Site.Params.slogan | default "Đủ Đồ Dùng, Vào Học Là Chiến!" }}</span>
+          </h1>
+          <p class="text-[14.5px] sm:text-[15.5px] text-[#424245] leading-relaxed max-w-2xl">
+            Chọn lọc trọn bộ đồ dùng cho góc học tập tối giản: từ <strong class="font-medium text-[#1d1d1f]">bút viết, vở, máy tính cầm tay</strong> đến <strong class="font-medium text-[#1d1d1f]">bàn phím, chuột êm ái, tai nghe chống ồn và đèn học</strong>.
+          </p>
+        </div>
+
+        <!-- Primary & Secondary CTAs -->
+        <div class="flex flex-wrap items-center gap-3 pt-0.5">
+          <a
+            href="{{ "/san-pham/" | relURL }}"
+            class="as-pill-blue inline-flex items-center justify-center gap-1.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs sm:text-[13px] font-medium px-5 py-2.5 shadow-sm transition-colors"
+          >
+            <span>Khám phá {{ len hugo.Data.products }} sản phẩm</span>
+            <span aria-hidden="true">›</span>
+          </a>
+          <a
+            href="{{ "/combo/" | relURL }}"
+            class="inline-flex items-center justify-center gap-1.5 rounded-full bg-white hover:bg-[#fafafc] border border-[#d2d2d7] hover:border-[#86868b] text-[#1d1d1f] text-xs sm:text-[13px] font-medium px-5 py-2.5 transition-colors"
+          >
+            <span>Xem Combo tiết kiệm</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            href="{{ "/cong-cu/" | relURL }}"
+            class="inline-flex items-center gap-1 text-xs sm:text-[13px] font-medium text-[#0066cc] hover:underline px-2 py-2"
+          >
+            <span>Dùng đồng hồ Pomodoro</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        </div>
+
+        <!-- 3 Distinct USPs (Điểm riêng của CampusKit) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+          <div class="rounded-2xl bg-white border border-black/[0.05] shadow-[0_1px_6px_rgba(0,0,0,0.03)] p-3.5">
+            <p class="text-[11px] font-semibold text-[#0071e3] mb-0.5">Đặc quyền .edu.vn</p>
+            <p class="text-[12px] text-[#424245] leading-snug">Xác thực email sinh viên giảm trực tiếp 15% mọi đơn.</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-black/[0.05] shadow-[0_1px_6px_rgba(0,0,0,0.03)] p-3.5">
+            <p class="text-[11px] font-semibold text-[#1d1d1f] mb-0.5">Tối ưu mọi bàn học</p>
+            <p class="text-[12px] text-[#424245] leading-snug">Thiết bị gọn gàng, êm ái không ồn, lắp không khoan tường.</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-black/[0.05] shadow-[0_1px_6px_rgba(0,0,0,0.03)] p-3.5">
+            <p class="text-[11px] font-semibold text-[#b64400] mb-0.5">Tích hợp tiện ích học</p>
+            <p class="text-[12px] text-[#424245] leading-snug">Có sẵn Pomodoro &amp; thẻ lật 3D xem nhanh thông số.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (5/12): Visual 2x2 Product Bento Showcase + Live Flash Sale -->
+      <div class="lg:col-span-5 space-y-3.5">
+        <div class="rounded-[24px] bg-white border border-black/[0.05] shadow-[2px_6px_20px_rgba(0,0,0,0.05)] p-3.5">
+          <div class="grid grid-cols-2 gap-2.5">
+            <a href="{{ "/san-pham/?cat=Stationery" | relURL }}" class="group relative aspect-square rounded-2xl bg-[#f5f5f7] overflow-hidden block">
+              <img src="{{ "/images/prod-13.jpg" | relURL }}" alt="Dụng cụ viết" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span class="absolute bottom-2 left-2 rounded-full bg-white/90 backdrop-blur-md px-2.5 py-1 text-[10.5px] font-semibold text-[#1d1d1f] shadow-sm">
+                Dụng cụ viết
+              </span>
+            </a>
+            <a href="{{ "/san-pham/?cat=Workspace" | relURL }}" class="group relative aspect-square rounded-2xl bg-[#f5f5f7] overflow-hidden block">
+              <img src="{{ "/images/prod-3-notebook.jpg" | relURL }}" alt="Văn phòng phẩm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span class="absolute bottom-2 left-2 rounded-full bg-white/90 backdrop-blur-md px-2.5 py-1 text-[10.5px] font-semibold text-[#1d1d1f] shadow-sm">
+                Văn phòng phẩm
+              </span>
+            </a>
+            <a href="{{ "/san-pham/?cat=Tiện%20ích%20không%20gian" | relURL }}" class="group relative aspect-square rounded-2xl bg-[#f5f5f7] overflow-hidden block">
+              <img src="{{ "/images/prod-1.jpg" | relURL }}" alt="Tiện ích góc học tập" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span class="absolute bottom-2 left-2 rounded-full bg-white/90 backdrop-blur-md px-2.5 py-1 text-[10.5px] font-semibold text-[#1d1d1f] shadow-sm">
+                Tiện ích góc học tập
+              </span>
+            </a>
+            <a href="{{ "/san-pham/?cat=Năng%20suất" | relURL }}" class="group relative aspect-square rounded-2xl bg-[#f5f5f7] overflow-hidden block">
+              <img src="{{ "/images/prod-33.jpg" | relURL }}" alt="Thiết bị học tập" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span class="absolute bottom-2 left-2 rounded-full bg-white/90 backdrop-blur-md px-2.5 py-1 text-[10.5px] font-semibold text-[#1d1d1f] shadow-sm">
+                Thiết bị học tập
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Compact Live Flash Sale Countdown Bar -->
+        <div
+          id="flashSaleHeroBar"
+          class="bg-white rounded-2xl p-3.5 shadow-[2px_4px_12px_rgba(0,0,0,0.05)] border border-black/[0.04]"
+        >
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <span class="text-[11px] font-semibold text-[#b64400] uppercase tracking-wider">⚡ Flash Sale Mùa Thi • Giảm 35%</span>
+            <span class="text-[10.5px] font-medium text-[#6e6e73]">Mã {{ .Site.Params.promoCode | default "SINHVIEN11" }}</span>
+          </div>
+
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1" aria-label="Đồng hồ đếm ngược khuyến mãi">
+              <div class="inline-flex items-baseline gap-0.5 rounded-lg bg-[#f5f5f7] px-2 py-1 text-[#1d1d1f]">
+                <span id="cdDays" class="text-xs font-semibold tabular-nums">05</span>
+                <span class="text-[9px] font-medium text-[#6e6e73]">n</span>
+              </div>
+              <span class="text-[#86868b] text-xs font-semibold select-none">:</span>
+              <div class="inline-flex items-baseline gap-0.5 rounded-lg bg-[#f5f5f7] px-2 py-1 text-[#1d1d1f]">
+                <span id="cdHours" class="text-xs font-semibold tabular-nums">14</span>
+                <span class="text-[9px] font-medium text-[#6e6e73]">g</span>
+              </div>
+              <span class="text-[#86868b] text-xs font-semibold select-none">:</span>
+              <div class="inline-flex items-baseline gap-0.5 rounded-lg bg-[#f5f5f7] px-2 py-1 text-[#1d1d1f]">
+                <span id="cdMinutes" class="text-xs font-semibold tabular-nums">48</span>
+                <span class="text-[9px] font-medium text-[#6e6e73]">p</span>
+              </div>
+              <span class="text-[#86868b] text-xs font-semibold select-none">:</span>
+              <div id="cdSecondsBox" class="inline-flex items-baseline gap-0.5 rounded-lg bg-[#0071e3] px-2 py-1 text-white shadow-sm">
+                <span id="cdSeconds" class="text-xs font-semibold tabular-nums">32</span>
+                <span class="text-[9px] font-medium text-white/85">s</span>
+              </div>
+            </div>
+
+            <a
+              href="#featured-products"
+              id="heroBuyNowBtn"
+              class="text-xs font-medium text-[#0066cc] hover:underline whitespace-nowrap shrink-0"
+            >
+              Săn ngay ›
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Row 2: Product Category Icon Ribbon -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+    <div id="categoryGrid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-3">
+      {{ range $index, $cat := hugo.Data.categories }}
+      <button
+        type="button"
+        data-cat-group="{{ $cat.group }}"
+        data-cat-sub="{{ $cat.name }}"
+        data-cat-name="{{ $cat.name }}"
+        class="w-full flex flex-col items-center text-center p-2.5 sm:p-3 rounded-2xl hover:bg-white/80 transition-all group focus:outline-none"
+      >
+        <div class="w-16 h-16 rounded-2xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
+          <svg class="w-7 h-7 stroke-[#1d1d1f] group-hover:stroke-[#0066cc] transition-colors" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            {{ $cat.svg | safeHTML }}
+          </svg>
+        </div>
+        <span class="text-[12px] font-medium text-[#1d1d1f] group-hover:text-[#0066cc] leading-snug transition-colors">
+          {{ $cat.name }}
+        </span>
+      </button>
+      {{ end }}
+    </div>
+  </div>
+</section>

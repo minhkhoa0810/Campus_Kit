@@ -1,0 +1,663 @@
+- id: prod-1
+  name: Giá Đỡ Laptop Nhôm Nguyên Khối AeroStand Pro
+  category: Tiện ích không gian
+  subCategory: Giá đỡ laptop
+  featured: true
+  price: 289000
+  originalPrice: 390000
+  discountPercent: 26
+  badge: BEST SELLER
+  specs: Hợp kim nhôm Anodized • Tương thích MacBook & Laptop 13"–16"
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành khung 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Nâng chuẩn góc nhìn 18° chống mỏi cổ vai gáy khi ngồi bàn KTX thấp
+  - Khe thoáng tản nhiệt mở 75% mặt đáy kèm đệm silicone chống trượt
+  - Tận dụng khoảng trống bên dưới để cất gọn bàn phím và sổ tay B5
+  image: /images/prod-1.jpg
+- id: prod-2
+  name: Bàn Phím Cơ Không Dây 75% CampusKey Navy Edition
+  category: Năng suất
+  subCategory: Bàn phím cơ
+  featured: true
+  price: 790000
+  originalPrice: 950000
+  discountPercent: 17
+  badge: ƯU ĐÃI MÙA THI
+  specs: Silent Linear Switch (Không ồn KTX) • Pin 120 giờ • 3 Mode kết nối
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành mạch 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Switch Silent Linear giảm âm <32dB — gõ code đêm không ảnh hưởng bạn cùng phòng
+  - Layout 75% (82 phím) tiết kiệm 30% diện tích mặt bàn học nhỏ
+  - Kết nối Bluetooth 5.1 / Receiver 2.4GHz / Type-C chuyển nhanh 3 thiết bị
+  image: /images/prod-2.jpg
+- id: prod-3
+  name: Sổ Tay Lò Xo Bìa PP MUJI B5 Ruột Kẻ Ô Vuông (160 Trang)
+  category: Workspace
+  subCategory: Vở & Sổ tay
+  featured: true
+  price: 68000
+  originalPrice: 89000
+  discountPercent: 24
+  badge: MUJI B5 GRID
+  specs: Khổ B5 (25.3×17.5cm) • 80 tờ (160 trang) kẻ ô vuông • Bìa nhựa PP mờ chống thấm
+  warranty: Đổi mới 7 ngày nếu lỗi gáy lò xo hoặc giấy
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Bìa nhựa PP nhám mờ chống nước, bo góc mềm mại bảo vệ ruột sổ gọn gàng trong balo
+  - Giấy kem chống lóa 100GSM kẻ ô vuông 5mm sắc nét, viết bút gel và highlight không lem
+  - Gáy lò xo kép bằng thép chắc chắn giúp lật gập 360° tiện ghi chép trên bàn giảng đường
+  image: /images/prod-3-notebook.jpg
+- id: prod-4
+  name: Đèn Học Để Bàn Gấp 360 Độ GHX-204 (Màu Đen)
+  category: Tiện ích không gian
+  subCategory: Đèn bàn học
+  featured: true
+  price: 200000
+  originalPrice: 260000
+  discountPercent: 23
+  badge: XOAY GẤP 360°
+  specs: Khung thép sơn tĩnh điện gấp gọn • Kích thước 150×125×550mm • Đế tròn chắc chắn
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thân đèn khớp lò xo kép xoay gập linh hoạt 360°, dễ dàng chỉnh góc chiếu sáng chuẩn tầm mắt
+  - Chao đèn kim loại đen nhám lòng trắng khuếch tán ánh sáng dịu mắt, chống chói khi học đêm
+  - Chân đế tròn nặng chống đổ vững vàng, tương thích bóng LED đui E27 dễ thay thế
+  image: /images/prod-4-lamp.jpg
+- id: prod-5
+  name: Chuột Không Dây Logitech M331 Silent Plus
+  category: Năng suất
+  subCategory: Chuột công thái học
+  featured: false
+  price: 355000
+  originalPrice: 430000
+  discountPercent: 17
+  badge: KHÔNG TIẾNG ỒN
+  specs: Cảm biến 1000 DPI • Giảm 90% tiếng click • Đầu thu USB Nano • Dùng 1 pin AA
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Công nghệ SilentTouch giảm hơn 90% tiếng ồn nhấp chuột — lý tưởng cho thư viện và KTX
+  - Thiết kế công thái học ôm gọn tay phải kèm đệm cao su vân nổi chống trượt êm ái
+  - Độ phân giải 1000 DPI mượt mà, kết nối USB 2.4GHz ổn định và thời lượng 1 pin AA đến 18 tháng
+  image: /images/prod-5.jpg
+- id: prod-7
+  name: Bảng Pegboard Để Bàn Màu Trắng IGA IG417 Kèm Kệ & Móc Treo
+  category: Tiện ích không gian
+  subCategory: Bảng Pegboard
+  featured: false
+  price: 117000
+  originalPrice: 155000
+  discountPercent: 25
+  badge: LẮP RÁP KHÔNG KHOAN
+  specs: Gỗ nhựa PVC trắng chống ẩm • Cấu trúc lỗ mộng dễ lắp • Kèm 3 kệ nhỏ & 2 móc treo
+  warranty: 1 đổi 1 trong 30 ngày
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Chân đế đứng độc lập vững chắc trên mặt bàn — không cần khoan đục, chuẩn nội quy KTX
+  - Cấu trúc lỗ mộng thông minh dễ dàng thay đổi vị trí 3 kệ nhỏ và 2 móc treo theo nhu cầu
+  - Tông trắng nhám bo vòm tối giản kết hợp tay cầm phía trên, tăng gấp đôi không gian lưu trữ
+  image: /images/prod-7-pegboard.jpg
+- id: prod-8
+  name: Hộp 300 Thẻ Flashcard Ôn Thi Định Lượng 250GSM Kèm Khoen
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 79000
+  originalPrice: 110000
+  discountPercent: 28
+  badge: ÔN THI CẤP TỐC
+  specs: 300 thẻ trắng ngà 250GSM • 4 khoen thép không gỉ • Kèm bìa Kraft/Navy
+  warranty: Đổi mới 7 ngày
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Giấy bìa cứng 250GSM lật tráo Spaced Repetition hàng trăm lần không quăn góc
+  - Một mặt trơn vẽ sơ đồ tư duy / công thức, một mặt kẻ dòng ghi định nghĩa
+  - Kích thước chuẩn A7 bỏ túi áo khoác ôn bài trên xe buýt tuyến 08, 52, Metro
+  image: /images/prod-8-flashcard.jpg
+- id: prod-9
+  name: Kệ Kê Màn Hình Gỗ MDF 50cm Made4Home (Màu Óc Chó)
+  category: Tiện ích không gian
+  subCategory: Kệ kê màn hình
+  featured: false
+  price: 220000
+  originalPrice: 290000
+  discountPercent: 24
+  badge: GỖ ÓC CHÓ TỐI GIẢN
+  specs: Kích thước 50×20×9cm • Gỗ MDF phủ Melamine chống ẩm • Chịu tải 20kg
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế chữ U nguyên khối rộng 50cm giúp cất gọn bàn phím và chuột bên dưới mặt kệ
+  - Gỗ MDF lõi dày phủ vân gỗ óc chó chống ẩm, chống trầy xước và dễ vệ sinh
+  - Nâng tầm màn hình chuẩn góc nhìn, giải phóng không gian bàn học ký túc xá gọn gàng
+  image: /images/prod-7.jpg
+- id: prod-10
+  name: Sổ Kế Hoạch Tuần & Lịch Ôn Thi Academic Planner A5
+  category: Workspace
+  subCategory: Vở & Sổ tay
+  featured: false
+  price: 119000
+  originalPrice: 160000
+  discountPercent: 26
+  badge: QUẢN LÝ DEADLINE
+  specs: Undated 52 tuần • Bìa cứng chống nước Navy • Giấy 100GSM
+  warranty: Đổi mới 7 ngày
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Bố cục Undated bắt đầu từ bất kỳ tuần nào trong học kỳ mà không lãng phí trang
+  - Tích hợp bảng theo dõi tín chỉ, lịch thi cuối kỳ, Habit Tracker & ma trận Eisenhower
+  - Gáy khâu chỉ mở phẳng 180° tiện ghi chép trên bàn giảng đường hẹp
+  image: /images/prod-8.jpg
+- id: prod-11
+  name: Bộ 5 Bút Dạ Quang 2 Đầu Thiên Long Halo.zee HL-03 Nhiều Màu
+  category: Stationery
+  subCategory: Bút highlight
+  featured: false
+  price: 55000
+  originalPrice: 75000
+  discountPercent: 27
+  badge: 2 ĐẦU NEON
+  specs: 5 màu dạ quang nổi bật • Thiết kế 2 đầu (vát + tròn) • Mực khô nhanh không lem
+  warranty: Đổi mới 7 ngày nếu lỗi ngòi hoặc khô mực
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - 'Thiết kế 2 đầu tiện lợi: đầu vát tô tiêu đề chương, đầu tròn gạch chân ý chính'
+  - Bộ 5 màu neon tươi sáng (Cam / Hồng / Vàng / Xanh lá / Xanh dương) dễ phân loại kiến thức
+  - Mực gốc nước an toàn, không thấm qua trang giấy và không làm lem chữ bút bi/bút gel
+  image: /images/prod-11-hl.jpg
+- id: prod-12
+  name: Đồng Hồ Bấm Giờ Đếm Ngược Học Tập LCD Mini (Nhiều Màu)
+  category: Năng suất
+  subCategory: Đồng hồ
+  featured: false
+  price: 59000
+  originalPrice: 85000
+  discountPercent: 31
+  badge: ĐẾM NGƯỢC HỌC TẬP
+  specs: Màn hình LCD số lớn sắc nét • Đếm tiến & đếm ngược 24 giờ • Chân đứng + nam châm mặt sau
+  warranty: 1 đổi 1 trong 30 ngày
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Màn hình LCD cỡ lớn dễ quan sát từ xa, hỗ trợ chế độ Đồng hồ (Clock) và Đếm ngược (Timer)
+  - Phím bấm vật lý rõ ràng (HOUR / MIN / SEC / START-STOP) thiết lập nhanh phiên học 25–45 phút
+  - Tích hợp chân chống để bàn gọn gàng kèm nam châm mặt lưng gắn tiện lợi mọi góc học tập
+  image: /images/prod-12-timer.jpg
+- id: prod-13
+  name: Hộp 12 Bút Chì Gỗ 2B Thiên Long GP-018 Tô Trắc Nghiệm
+  category: Stationery
+  subCategory: Bút chì
+  featured: false
+  price: 49000
+  originalPrice: 65000
+  discountPercent: 25
+  badge: THI TRẮC NGHIỆM
+  specs: Ruột chì 2B đậm nét • Thân gỗ lục giác chống lăn • Hộp 12 cây gọt sẵn
+  warranty: Đổi mới 7 ngày nếu gãy ngòi bên trong
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Ruột chì 2B mềm mịn, tô nhanh kín ô trắc nghiệm và dễ tẩy sạch không rách giấy
+  - Thân gỗ lục giác phủ sơn vàng cổ điển, cầm chắc tay và chống lăn khỏi bàn học
+  - Hộp 12 cây dùng trọn học kỳ cho các môn thi trắc nghiệm, phác thảo và ghi chú nhanh
+  image: /images/prod-13.jpg
+- id: prod-14
+  name: Giá Đỡ Laptop Nhôm Đế Phẳng Tản Nhiệt Tổ Ong AeroFlex Z2
+  category: Tiện ích không gian
+  subCategory: Giá đỡ laptop
+  featured: false
+  price: 359000
+  originalPrice: 460000
+  discountPercent: 22
+  badge: TẢN NHIỆT TỔ ONG
+  specs: Hợp kim nhôm CNC dày 4mm • Mặt tản nhiệt tổ ong • Trục kép chỉnh độ cao linh hoạt
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành khung 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế lỗ tản nhiệt tổ ong thoáng khí giúp máy luôn mát khi chạy đồ án và lập trình
+  - Trục kép bản lề siêu chắc chịu tải đến 10kg, tùy chỉnh linh hoạt độ cao và góc nghiêng
+  - Đế phẳng rộng kèm 4 đệm silicone chống trượt, tương thích Laptop và iPad 11"–17"
+  image: /images/prod-14.jpg
+- id: prod-15
+  name: Bộ 2 Chân Đế Tản Nhiệt Mini Dán Đáy Laptop Hợp Kim Kẽm
+  category: Tiện ích không gian
+  subCategory: Giá đỡ laptop
+  featured: false
+  price: 59000
+  originalPrice: 89000
+  discountPercent: 34
+  badge: SIÊU MỎNG GẤP GỌN
+  specs: Hợp kim kẽm nguyên khối • Nâng 2 nấc độ cao • Dán ẩn dưới đáy máy 13"–17"
+  warranty: 1 đổi 1 trong 30 ngày
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế ẩn siêu mỏng chỉ 5mm dán trực tiếp dưới đáy laptop, bỏ balo gọn nhẹ không vướng
+  - Nâng cấp 2 mức điều chỉnh góc nghiêng giúp tản nhiệt thoáng khí và gõ phím đỡ mỏi cổ tay
+  - Hợp kim kẽm chịu lực bền bỉ kèm đệm silicone chống trượt và keo dán chắc chắn không để lại vết
+  image: /images/prod-15.jpg
+- id: prod-16
+  name: Bàn Phím Cơ Không Dây 75% Aula F75 Ice Blue (Núm Xoay)
+  category: Năng suất
+  subCategory: Bàn phím cơ
+  featured: false
+  price: 1349000
+  originalPrice: 1690000
+  discountPercent: 20
+  badge: GASKET MOUNT
+  specs: Layout 75% kèm núm xoay kim loại • 3 Mode Bluetooth / 2.4G / Type-C • Hotswap 5 Pin
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Cấu trúc Gasket Mount 5 lớp tiêu âm cho âm gõ trầm êm, phù hợp gõ bài đêm tại KTX
+  - Núm xoay nhôm CNC góc phải điều chỉnh âm lượng và độ sáng LED RGB nhanh gọn
+  - Pin dung lượng lớn 4000mAh kết nối linh hoạt 3 chế độ giữa Laptop, iPad và PC
+  image: /images/prod-16.jpg
+- id: prod-17
+  name: Bàn Phím Cơ Không Dây GravaStar Mercury K1 75% Khung Nhôm
+  category: Năng suất
+  subCategory: Bàn phím cơ
+  featured: false
+  price: 2690000
+  originalPrice: 3190000
+  discountPercent: 16
+  badge: KHUNG NHÔM CNC
+  specs: Khung hợp kim nhôm Exoskeleton • Keycap Gradient PBT • 3 Mode kết nối & LED Ambient
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Khung hợp kim nhôm đúc nguyên khối thiết kế độc bản cực chắc chắn, nâng tầm góc học tập
+  - Bộ keycap PBT Gradient chuyển sắc xám-đen chống bóng dầu kèm thanh lăn kim loại
+  - Hệ thống đèn nền RGB kép + viền Ambient ấm áp, hỗ trợ Hotswap thay switch dễ dàng
+  image: /images/prod-17.jpg
+- id: prod-18
+  name: Bàn Phím Bluetooth Logitech K580 Siêu Mỏng (Trắng)
+  category: Năng suất
+  subCategory: Bàn phím cơ
+  featured: false
+  price: 990000
+  originalPrice: 1199000
+  discountPercent: 17
+  badge: SIÊU MỎNG ÊM ÁI
+  specs: Kết nối đa thiết bị Easy-Switch • Khe dựng điện thoại tích hợp • Phím cắt kéo siêu êm
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế siêu mỏng gọn kèm cụm phím số Numpad đầy đủ, gõ êm như laptop không gây ồn
+  - Tích hợp khe rãnh dựng điện thoại ngay cạnh trên, chuyển nhanh 2 thiết bị qua Easy-Switch
+  - Kết nối kép Bluetooth và đầu thu USB Unifying, thời lượng pin bền bỉ đến 24 tháng
+  image: /images/prod-18.jpg
+- id: prod-19
+  name: Chuột Bluetooth ASUS MD102 (Trắng)
+  category: Năng suất
+  subCategory: Chuột công thái học
+  featured: false
+  price: 460000
+  originalPrice: 550000
+  discountPercent: 16
+  badge: DUAL MODE BT + 2.4G
+  specs: Kết nối kép Bluetooth & 2.4GHz • DPI 800/1000/1600 • Chân đế 100% PTFE trượt mượt
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 24 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Chân chuột 100% PTFE kết hợp nút bấm tuổi thọ 10 triệu lần nhấp cho cảm giác mượt mà
+  - Tùy chỉnh nhanh 3 mức DPI (800 / 1000 / 1600) phù hợp đa dạng độ phân giải màn hình
+  - Kết nối kép không dây Bluetooth và 2.4GHz tiết kiệm năng lượng với thời lượng pin đến 12 tháng
+  image: /images/prod-19.jpg
+- id: prod-20
+  name: Chuột Không Dây UGREEN MU105 Silent 2400 DPI (Hồng Pastel)
+  category: Năng suất
+  subCategory: Chuột công thái học
+  featured: false
+  price: 150000
+  originalPrice: 210000
+  discountPercent: 29
+  badge: SILENT 2400 DPI
+  specs: Độ nhạy cao 2400 DPI • Nút bấm Silent không tiếng ồn • Đầu thu USB • Dùng 1 pin AA
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Kiểu dáng siêu mỏng đối xứng màu hồng pastel tối giản, dễ dàng bỏ gọn vào túi chống sốc
+  - Công nghệ giảm ồn Silent gần như im lặng hoàn toàn — thoải mái sử dụng trong thư viện
+  - Cảm biến quang học độ nhạy cao 2400 DPI di mượt mà trên nhiều bề mặt bàn học
+  image: /images/prod-20.jpg
+- id: prod-21
+  name: Chuột Dọc Công Thái Học UGREEN MU008 Bluetooth 5.0 & 2.4GHz
+  category: Năng suất
+  subCategory: Chuột công thái học
+  featured: false
+  price: 574000
+  originalPrice: 650000
+  discountPercent: 12
+  badge: CÔNG THÁI HỌC 57°
+  specs: Góc nghiêng 57° chống mỏi cổ tay • Bluetooth 5.0 & 2.4G (3 thiết bị) • Tối đa 4000 DPI
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế chuột dọc góc nghiêng chuẩn 57° giúp cổ tay giữ tư thế tự nhiên khi làm việc lâu
+  - Kết nối kép Bluetooth 5.0 và 2.4GHz, chuyển đổi mượt mà cùng lúc giữa 3 thiết bị
+  - Tùy chỉnh độ nhạy lên đến 4000 DPI với phạm vi kết nối ổn định 10m trên đa nền tảng
+  image: /images/prod-21.jpg
+- id: prod-22
+  name: Đèn LED Kẹp Bàn 12W Thanh Ngang Cỡ Lớn 3 Màu Ánh Sáng LT-01
+  category: Tiện ích không gian
+  subCategory: Đèn bàn học
+  featured: false
+  price: 285000
+  originalPrice: 360000
+  discountPercent: 21
+  badge: LED 12W KẸP BÀN
+  specs: Công suất 12W chiếu sáng diện rộng • 3 chế độ màu ánh sáng • Kẹp cạnh bàn kim loại chắc chắn
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thanh LED ngang cỡ lớn 12W tỏa sáng đều khắp mặt bàn học mà không gây chói màn hình laptop
+  - Ngàm kẹp chữ C bằng kim loại gắn sát mép bàn giúp tiết kiệm 100% diện tích mặt bàn KTX
+  - Tùy chỉnh linh hoạt 3 nhiệt độ màu (Trắng / Trung tính / Vàng ấm) và 10 mức độ sáng
+  image: /images/prod-22.jpg
+- id: prod-23
+  name: Bộ 3 Bút Chì Kim Bấm M&G 0.5mm Vỏ Kim Loại Kèm Ruột Chì
+  category: Stationery
+  subCategory: Bút chì
+  featured: false
+  price: 89000
+  originalPrice: 120000
+  discountPercent: 26
+  badge: VỎ KIM LOẠI 0.5MM
+  specs: Ngòi kim 0.5mm chính xác • Thân hợp kim ánh kim 3 màu • Kèm ống ruột chì 0.5mm 2B
+  warranty: Đổi mới 7 ngày nếu lỗi cơ chế bấm ngòi
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Vỏ kim loại chắc tay, trọng tâm cân bằng giúp vẽ kỹ thuật và ghi chép lâu không mỏi
+  - Đầu ngòi kim 0.5mm chống gãy ruột, cơ chế bấm êm mượt kèm kẹp cài sổ bằng thép sáng
+  - Bộ 3 tông màu tối giản (Bạc / Vàng Champagne / Nâu Titan) tặng kèm ống ruột chì 0.5mm 2B
+  image: /images/prod-23.jpg
+- id: prod-24
+  name: Lốc 4 Quyển Vở Hồng Hà Class Childhood 4 Ô Ly 96 Trang (0300)
+  category: Workspace
+  subCategory: Vở & Sổ tay
+  featured: false
+  price: 52000
+  originalPrice: 68000
+  discountPercent: 24
+  badge: HỒNG HÀ 4 Ô LY
+  specs: 96 trang 4 ô ly vuông • Giấy trắng tự nhiên chống lóa • Bìa chủ đề Tuổi Thơ 4 màu
+  warranty: Đổi mới 7 ngày nếu lỗi in ấn hoặc gáy
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Giấy mịn dày dặn viết không nhòe, không thấm mực sang trang sau với bút gel và bút máy
+  - Độ trắng tự nhiên dịu mắt giúp ghi chép bài học lâu không gây mỏi mắt
+  - Lốc 4 quyển bìa màu pastel tươi sáng dễ phân loại riêng cho từng môn học
+  image: /images/prod-24.jpg
+- id: prod-25
+  name: Vở Sinh Viên Hồng Hà 200 Trang Khổ A4 Kẻ Ngang (4586)
+  category: Workspace
+  subCategory: Vở & Sổ tay
+  featured: false
+  price: 28000
+  originalPrice: 35000
+  discountPercent: 20
+  badge: KHỔ A4 200 TRANG
+  specs: Kích thước A4 (210×297mm) • 200 trang kẻ ngang • Gáy dán vải đen chắc chắn
+  warranty: Đổi mới 7 ngày nếu lỗi gáy hoặc giấy
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Khổ lớn A4 rộng rãi thoải mái trình bày công thức, sơ đồ tư duy và bài giảng đại học
+  - Dung lượng 200 trang dày dặn kèm gáy bọc vải đen bền chắc, mở phẳng dễ viết
+  - Bìa pastel họa tiết mèo dễ thương có sẵn khung SUBJECT ghi tên môn học tiện lợi
+  image: /images/prod-25.jpg
+- id: prod-26
+  name: Hộp 10 Bút Gel Bấm ClassMate Basic CL-GP109D Đen 0.5mm
+  category: Stationery
+  subCategory: Bút gel
+  featured: false
+  price: 59000
+  originalPrice: 75000
+  discountPercent: 21
+  badge: MỰC ĐEN 0.5MM
+  specs: Ngòi 0.5mm êm mượt • Đệm tay cao su chống trơn • Mực đen đậm không thấm nước
+  warranty: Đổi mới 7 ngày nếu tắc mực
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thân nhựa trong khói hiện đại kèm đệm tay cao su xám êm ái khi ghi chép liên tục
+  - Mực gel đen đậm nét, khô nhanh và không thấm nước — lý tưởng cho bài thi tự luận
+  - Hộp 10 cây tiết kiệm chi phí dùng xuyên suốt cả học kỳ
+  image: /images/prod-26.jpg
+- id: prod-27
+  name: Hộp 12 Bút Gel Bấm Deli A575/G575 Linfini Mực Xanh 0.5mm
+  category: Stationery
+  subCategory: Bút gel
+  featured: false
+  price: 95000
+  originalPrice: 120000
+  discountPercent: 21
+  badge: VIẾT TỚI 800M
+  specs: Ngòi 0.5mm đầu đạn • Mực xanh tươi ra đều • Dung lượng mực lớn viết lên tới 800m
+  warranty: Đổi mới 7 ngày nếu tắc mực
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế thân trong suốt tối giản kiểu Nhật dễ theo dõi lượng mực còn lại bên trong
+  - Ống mực dung lượng lớn cho quãng đường viết dài tới 800m, nét chữ thanh mảnh sắc nét
+  - Cơ chế bấm nhạy nhẹ, ngòi 0.5mm lướt êm trên mọi loại giấy vở sinh viên
+  image: /images/prod-27.jpg
+- id: prod-28
+  name: Hộp 10 Bút Gel Bấm Nhanh Khô Deli S08 LineFlow Mực Đỏ 0.5mm
+  category: Stationery
+  subCategory: Bút gel
+  featured: false
+  price: 99000
+  originalPrice: 125000
+  discountPercent: 21
+  badge: NHANH KHÔ KHÔNG LEM
+  specs: Ngòi 0.5mm đầu đạn • Mực đỏ tươi khô tức thì • Đệm tay cao su mềm chống mỏi
+  warranty: Đổi mới 7 ngày nếu tắc mực
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Công nghệ mực gel LineFlow khô nhanh không lem tay, giữ vở ghi chú luôn sạch đẹp
+  - Sắc đỏ tươi nổi bật giúp chấm bài, khoanh công thức trọng tâm và ghi chú lề dễ nhìn
+  - Thân bút đỏ trong suốt kèm đệm cao su chống trơn cầm chắc tay suốt giờ học
+  image: /images/prod-28.jpg
+- id: prod-29
+  name: Dụng Cụ Chuốt Bút Chì 2 Lỗ Nắp Trong Suốt Có Hộp Đựng (Đen)
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 22000
+  originalPrice: 29000
+  discountPercent: 24
+  badge: 2 LỖ GỌT BÉN
+  specs: 2 lỗ gọt tiêu chuẩn & cỡ lớn • Lưỡi thép không gỉ sắc bén • Nắp trong suốt chứa phoi tiện lợi
+  warranty: Đổi mới 7 ngày nếu lỗi lưỡi gọt
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Thiết kế 2 lỗ gọt riêng biệt phù hợp cả bút chì gỗ 2B tiêu chuẩn lẫn bút chì màu thân lớn
+  - Lưỡi dao thép cao cấp gọt êm mượt, hạn chế gãy ngòi chì trong lúc ôn thi
+  - Hộp đựng vỏ trong suốt nhỏ gọn giữ sạch vụn chì, dễ dàng mang theo trong hộp bút
+  image: /images/prod-29.jpg
+- id: prod-30
+  name: Gôm Tẩy Kokuyo Campus Standard Cỡ Lớn (ER-STA-20)
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 10000
+  originalPrice: 14000
+  discountPercent: 29
+  badge: CHUẨN NHẬT BẢN
+  specs: Chất liệu PVC mềm dẻo • Tẩy sạch không rách giấy • Ít vụn gom thành dải gọn gàng
+  warranty: Đổi mới 7 ngày nếu lỗi sản xuất
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Tẩy sạch nhanh nét chì 2B trên phiếu trả lời trắc nghiệm mà không để lại vết lem xám
+  - Kết cấu cao su mềm êm bảo vệ bề mặt giấy vở, không làm sờn hay rách giấy
+  - Bọc giấy xanh-đen đặc trưng Kokuyo Campus chống bẩn tay và giữ gôm bền lâu
+  image: /images/prod-30.jpg
+- id: prod-31
+  name: Bộ Thước Kẻ, Ê-ke & Đo Độ 5 Cây WinQ T-160 Trong Suốt
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 12000
+  originalPrice: 18000
+  discountPercent: 33
+  badge: BỘ 5 CÂY ĐA NĂNG
+  specs: 5 món (Thước 20cm, 2 Ê-ke, Đo độ 180°, Thước Parabol) • Nhựa trong suốt vạch chia sắc nét
+  warranty: Đổi mới 7 ngày nếu nứt vỡ khi vận chuyển
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Đủ trọn bộ 5 cây phục vụ vẽ hình học, đồ thị Parabol, biểu đồ và vẽ kỹ thuật
+  - Nhựa trong suốt độ tinh khiết cao giúp căn chỉnh chính xác từng milimet trên trang giấy
+  - Vạch chia mực in rõ nét, bền màu không bong tróc khi sử dụng thường xuyên
+  image: /images/prod-31.jpg
+- id: prod-32
+  name: Tai Nghe Bluetooth True Wireless Anker Soundcore K20i (A3994)
+  category: Năng suất
+  subCategory: Tai nghe chống ồn
+  featured: false
+  price: 285000
+  originalPrice: 520000
+  discountPercent: 45
+  badge: PIN 36H • ENC AI
+  specs: Chống ồn đàm thoại ENC AI 2 micro • Pin đến 36 giờ • Driver 13mm & 22 chế độ EQ
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 18 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Công nghệ khử ồn đàm thoại AI 2 micro lọc tạp âm rõ nét khi học online và họp nhóm
+  - Thiết kế Semi-in-ear siêu nhẹ đeo thoải mái nhiều giờ liền không gây bí tai
+  - Thời lượng pin lên đến 36 giờ kèm hộp sạc, sạc nhanh 10 phút nghe thêm 2 giờ
+  image: /images/prod-32.jpg
+- id: prod-33
+  name: Tai Nghe Bluetooth Chụp Tai Chống Ồn Baseus Bowie H1i (Kem Trắng)
+  category: Năng suất
+  subCategory: Tai nghe chống ồn
+  featured: false
+  price: 490000
+  originalPrice: 1190000
+  discountPercent: 59
+  badge: ANC -38dB • PIN 100H
+  specs: Chống ồn chủ động ANC -38dB • Pin siêu trâu 100 giờ • Chuẩn âm thanh Hi-Res Audio
+  warranty: 1 đổi 1 trong 30 ngày • Bảo hành chính hãng 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Chống ồn chủ động ANC sâu -38dB tách biệt tiếng ồn KTX và quán cà phê để tập trung ôn thi
+  - Thời lượng pin ấn tượng lên đến 100 giờ, kết nối Bluetooth 5.3 ổn định kèm cổng AUX 3.5mm
+  - Đệm tai da mềm êm ái màu kem tối giản, ôm trọn tai không gây đau khi học xuyên đêm
+  image: /images/prod-33.jpg
+- id: prod-34
+  name: Máy Tính Khoa Học Casio FX-880BTG ClassWiz
+  category: Workspace
+  subCategory: Máy tính cầm tay
+  featured: false
+  price: 499000
+  originalPrice: 589000
+  discountPercent: 15
+  badge: ĐƯỢC MANG VÀO PHÒNG THI
+  specs: Dòng ClassWiz thế hệ mới • Phím tròn chống trượt • Hỗ trợ bảng tuần hoàn & mã QR đồ thị
+  warranty: Bảo hành chính hãng BITEX 7 năm (1 đổi 1 năm đầu)
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Được Bộ GD&ĐT cho phép mang vào phòng thi tốt nghiệp THPT và các kỳ thi đại học
+  - Tích hợp hộp toán học (Math Box), bảng nguyên tử khối và tạo mã QR xem đồ thị trực quan
+  - Thiết kế phím tròn hiện đại, màn hình độ phân giải cao hiển thị công thức tự nhiên sắc nét
+  image: /images/prod-34.jpg
+- id: prod-35
+  name: Máy Tính Khoa Học Vinacal 680EX Plus II (Xám)
+  category: Workspace
+  subCategory: Máy tính cầm tay
+  featured: false
+  price: 489000
+  originalPrice: 560000
+  discountPercent: 13
+  badge: TOÁN TÀI CHÍNH & ĐẠI HỌC
+  specs: Tích hợp công thức toán tài chính • Giải nhanh giới hạn Lim • Tông trắng tối giản
+  warranty: Bảo hành chính hãng 2 năm
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Tích hợp sẵn các hàm tính lãi đơn, lãi kép và dòng tiền — cực tiện cho sinh viên khối Kinh tế
+  - Hỗ trợ giải hệ phương trình, ma trận 4×4, thống kê và tìm giới hạn hàm số tốc độ cao
+  - Vỏ trắng nhám thanh lịch, bố cục phím rõ ràng dễ thao tác trong phòng thi
+  image: /images/prod-35.jpg
+- id: prod-36
+  name: Máy Tính Khoa Học Thiên Long Flexio Fx799VN (Trắng)
+  category: Workspace
+  subCategory: Máy tính cầm tay
+  featured: false
+  price: 665000
+  originalPrice: 749000
+  discountPercent: 11
+  badge: 529+17 TÍNH NĂNG
+  specs: 529+17 tính năng khoa học • Đạt chuẩn phòng thi Bộ GD&ĐT • Gấp đôi dung lượng pin
+  warranty: Bảo hành chính hãng Thiên Long 2 năm
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Đạt chuẩn mang vào phòng thi theo quy định Bộ GD&ĐT, không có chức năng truyền tín hiệu
+  - Sở hữu 529+17 tính năng chuyên sâu kèm phím gọi nhanh tính năng hình học và ma trận
+  - Thiết kế trắng tối giản điểm nhấn phím DEL/AC đỏ nổi bật, thời lượng pin bền bỉ gấp đôi
+  image: /images/prod-36.jpg
+- id: prod-37
+  name: Máy Tính Khoa Học Casio FX-580VN X ClassWiz (Đen)
+  category: Workspace
+  subCategory: Máy tính cầm tay
+  featured: false
+  price: 699000
+  originalPrice: 790000
+  discountPercent: 12
+  badge: BEST SELLER SINH VIÊN
+  specs: 521 tính năng tốc độ xử lý vượt trội • Giải PT bậc 4 & hệ 4 ẩn • 4 biến nhớ vectơ
+  warranty: Bảo hành chính hãng BITEX 7 năm (1 đổi 1 năm đầu)
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Tốc độ xử lý nhanh gấp 4 lần thế hệ cũ, hỗ trợ giải phương trình bậc 4 và bất phương trình
+  - Màn hình LCD độ phân giải cao hiển thị Tiếng Việt trực quan giúp thao tác cực nhanh
+  - Phiên bản màu Xanh Pastel trẻ trung, được Bộ GD&ĐT cho phép mang vào phòng thi
+  image: /images/prod-37.jpg
+- id: prod-38
+  name: Balo Laptop Nhỏ Gọn Chống Nước GUBAG GB-BL01 (Xám Ghi)
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 299000
+  originalPrice: 390000
+  discountPercent: 23
+  badge: FORM VUÔNG CHỐNG NƯỚC
+  specs: Vải Oxford chống trượt nước • Tương thích Laptop 13"–15.6" • Quai đeo đệm thoáng khí
+  warranty: Bảo hành đường may & khóa kéo 12 tháng
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Form hộp chữ nhật tối giản giữ dáng chuẩn, vừa gọn laptop 13"–15.6" cùng giáo trình A4
+  - Chất liệu vải Oxford dệt mật độ cao chống thấm nước mưa nhẹ, bảo vệ thiết bị an toàn
+  - Ngăn phụ mặt trước kéo khóa tiện lấy nhanh thẻ sinh viên, sạc dự phòng và chìa khóa
+  image: /images/prod-38.jpg
+- id: prod-39
+  name: Túi Chống Sốc 2 Ngăn HARAS Cho Laptop 13"–14" (Xám Nhạt)
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 90000
+  originalPrice: 135000
+  discountPercent: 33
+  badge: 2 NGĂN CHỐNG SỐC
+  specs: Vải Canvas trượt nước • Lớp lót nhung chống trầy 360° • Ngăn phụ đựng sạc & chuột
+  warranty: 1 đổi 1 trong 30 ngày nếu lỗi khóa kéo
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - 'Thiết kế 2 ngăn khoa học: ngăn chính lót nhung mềm bảo vệ máy, ngăn phụ đựng củ sạc và chuột'
+  - Viền bo đen chống va đập góc máy kết hợp khóa kéo mượt mà siêu bền
+  - Siêu mỏng nhẹ dễ dàng cầm tay mang lên giảng đường hoặc cho gọn vào trong balo
+  image: /images/prod-39.jpg
+- id: prod-40
+  name: Bình Giữ Nhiệt Inox 304 Tối Giản 500ml (Bạc Xước)
+  category: Workspace
+  subCategory: Khác
+  featured: false
+  price: 129000
+  originalPrice: 175000
+  discountPercent: 26
+  badge: INOX 304 • GIỮ NHIỆT 12H
+  specs: Dung tích 500ml • Lõi Inox 304 an toàn sức khỏe • Giữ nóng/lạnh đến 12 giờ
+  warranty: 1 đổi 1 trong 30 ngày nếu rò rỉ hoặc mất chân không
+  stock: Còn hàng tại điểm nhận hàng
+  highlights:
+  - Cấu tạo 2 lớp chân không Inox 304 giữ đá lạnh tới 12 giờ và cà phê nóng suốt buổi học
+  - Bề mặt thép xước mờ tối giản không bám vân tay, không đọng sương làm ướt vở trong balo
+  - Nắp vặn gioăng silicone kín khít chống tràn tuyệt đối, dáng trụ thon gọn vừa hộc balo
+  image: /images/prod-40.jpg

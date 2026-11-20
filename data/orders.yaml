@@ -1,0 +1,154 @@
+orders:
+  - id: "CK-2611-8801"
+    customer: "Nguyễn Minh Khoa"
+    phone: "0901234567"
+    email: "khoa.nguyen@hcmut.edu.vn"
+    createdAt: "18/11/2026 • 03:45"
+    eta: "Dự kiến giao trước 09:30 hôm nay (Giao nhanh KTX 2H)"
+    address: "Ký túc xá Khu B – ĐHQG-HCM (Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, TP. Hồ Chí Minh)"
+    courier: "Trần Quốc Bảo • 0938 221 904 (Điểm nhận hàng CampusKit)"
+    step: 3
+    statusLabel: "SHIPPER ĐANG GIAO ĐẾN KTX"
+    payment: "Đã thanh toán MoMo Sinh viên (Đã áp mã SINHVIEN11)"
+    discount: 65850
+    total: 938150
+    items:
+      - name: "Bàn Phím Cơ Không Dây 75% CampusKey Navy Edition"
+        qty: 1
+        price: 790000
+      - name: "Combo Sổ Tay Còng B5 Muji-Style & Bộ 8 Bút Dạ Quang Pastel"
+        qty: 1
+        price: 145000
+      - name: "Bộ 6 Bút Gel Đen 0.5mm SmoothInk Nhanh Khô"
+        qty: 1
+        price: 65000
+    timeline:
+      - time: "03:45 • 18/11/2026"
+        title: "Đặt hàng thành công"
+        detail: "Hệ thống xác nhận đơn hàng & ưu đãi email sinh viên .edu.vn"
+        done: true
+      - time: "04:05 • 18/11/2026"
+        title: "Đóng gói chống sốc tại Điểm giao hàng Phường Đông Hòa"
+        detail: "Đã kiểm tra QC switch bàn phím cơ & niêm phong tem bảo hành điện tử"
+        done: true
+      - time: "04:25 • 18/11/2026"
+        title: "Đang tiến hành giao"
+        detail: "Gọi điện trước 5 phút khi tới nơi"
+        done: true
+      - time: "Dự kiến 09:30"
+        title: "Giao hàng thành công & Kích hoạt bảo hành 30 ngày"
+        detail: "Đồng kiểm ngoại quan tại sảnh KTX"
+        done: false
+
+  - id: "CK-2611-8802"
+    customer: "Lê Thảo Vy"
+    phone: "0987654321"
+    email: "vy.le@uit.edu.vn"
+    createdAt: "15/11/2026 • 14:20"
+    eta: "Đã giao lúc 15:52 • 15/11/2026 (Tổng thời gian: 92 phút)"
+    address: "Ký túc xá Khu A – ĐHQG-HCM (Đường Tạ Quang Bửu, Khu phố 33, Phường Linh Xuân, TP. Hồ Chí Minh)"
+    courier: "Phạm Hoàng Nam • 0909 412 883 (Điểm nhận hàng CampusKit)"
+    step: 4
+    statusLabel: "ĐÃ GIAO THÀNH CÔNG"
+    payment: "COD — Thanh toán khi nhận hàng tại sảnh"
+    discount: 50000
+    total: 659000
+    items:
+      - name: "Giá Đỡ Laptop Nhôm Nguyên Khối AeroStand Pro"
+        qty: 1
+        price: 289000
+      - name: "Bộ Đôi Đèn Kẹp Bàn Chống Cận LED & Đồng Hồ Cube Pomodoro"
+        qty: 1
+        price: 420000
+    timeline:
+      - time: "14:20 • 15/11/2026"
+        title: "Đặt hàng thành công"
+        detail: "Áp dụng voucher COMBOTHI50 (-50.000₫)"
+        done: true
+      - time: "14:40 • 15/11/2026"
+        title: "Đóng gói chống sốc tại Điểm giao hàng Phường Linh Xuân"
+        detail: "Kiểm tra độ sáng đèn LED CRI > 95 và cảm biến đồng hồ Pomodoro"
+        done: true
+      - time: "15:10 • 15/11/2026"
+        title: "Đang tiến hành giao"
+        detail: "Tuyến giao nội khu ĐHQG"
+        done: true
+      - time: "15:52 • 15/11/2026"
+        title: "Đã giao thành công cho Lê Thảo Vy"
+        detail: "Đã kích hoạt tự động bảo hành 1 đổi 1 tới ngày 15/12/2026"
+        done: true
+
+  - id: "CK-2611-8803"
+    customer: "Trần Tuấn Kiệt"
+    phone: "0912345678"
+    email: "kiet.tran@uel.edu.vn"
+    createdAt: "18/11/2026 • 04:10"
+    eta: "Dự kiến giao trong hôm nay (10:00 – 11:30)"
+    address: "CS1 – ĐH Khoa học Tự nhiên (227 Nguyễn Văn Cừ, Phường Chợ Quán, TP. Hồ Chí Minh)"
+    courier: "Đang gán điều phối viên gần nhất"
+    step: 2
+    statusLabel: "ĐANG ĐÓNG GÓI TẠI ĐIỂM NHẬN HÀNG"
+    payment: "Chuyển khoản VietQR (Đã áp mã FREESHIPKTX)"
+    discount: 25000
+    total: 459000
+    items:
+      - name: "Bảng Pegboard Thép Sơn Tĩnh Điện & Bộ 8 Phụ Kiện KTX"
+        qty: 1
+        price: 235000
+      - name: "Chuột Không Dây Công Thái Học SilentClick M1 Navy"
+        qty: 1
+        price: 249000
+    timeline:
+      - time: "04:10 • 18/11/2026"
+        title: "Đặt hàng thành công"
+        detail: "Thanh toán VietQR đã được xác nhận tự động"
+        done: true
+      - time: "04:22 • 18/11/2026"
+        title: "Đóng gói chống sốc tại Điểm giao hàng Phường Chợ Quán"
+        detail: "Kiểm đếm đủ 8 phụ kiện móc treo Pegboard & test chuột SilentClick"
+        done: true
+      - time: "Chờ xuất kho"
+        title: "Đang tiến hành giao"
+        detail: "Ca giao sáng bắt đầu lúc 08:00"
+        done: false
+      - time: "Dự kiến 11:00"
+        title: "Giao hàng tận nơi"
+        detail: "Hỗ trợ đồng kiểm 100%"
+        done: false
+
+warranties:
+  - serial: "SN-CKKEY-9921"
+    orderId: "CK-2611-8801"
+    phone: "0901234567"
+    email: "khoa.nguyen@hcmut.edu.vn"
+    productName: "Bàn Phím Cơ Không Dây 75% CampusKey Navy Edition"
+    activatedDate: "18/11/2026"
+    oneToOneUntil: "18/12/2026"
+    daysLeft: 30
+    hardwareUntil: "18/11/2027"
+    status: "ĐANG HIỆU LỰC (1 ĐỔI 1 MỚI)"
+    policy: "Đổi mới nguyên hộp trong 30 ngày đầu nếu double-click, liệt mạch hoặc lỗi kết nối Bluetooth/2.4G."
+
+  - serial: "SN-CKLAMP-4410"
+    orderId: "CK-2611-8802"
+    phone: "0987654321"
+    email: "vy.le@uit.edu.vn"
+    productName: "Bộ Đôi Đèn Kẹp Bàn Chống Cận LED & Đồng Hồ Cube Pomodoro"
+    activatedDate: "15/11/2026"
+    oneToOneUntil: "15/12/2026"
+    daysLeft: 27
+    hardwareUntil: "15/05/2027"
+    status: "ĐANG HIỆU LỰC (CÒN 27 NGÀY 1 ĐỔI 1)"
+    policy: "Đổi mới tận sảnh KTX Khu A/B nếu đèn nhấp nháy, liệt cảm ứng đổi màu hoặc lỗi cảm biến lật Cube."
+
+  - serial: "SN-CKMOUSE-7732"
+    orderId: "CK-2611-8803"
+    phone: "0912345678"
+    email: "kiet.tran@uel.edu.vn"
+    productName: "Chuột Không Dây Công Thái Học SilentClick M1 Navy"
+    activatedDate: "18/11/2026"
+    oneToOneUntil: "18/12/2026"
+    daysLeft: 30
+    hardwareUntil: "18/11/2027"
+    status: "ĐANG HIỆU LỰC (1 ĐỔI 1 MỚI)"
+    policy: "Đổi mới 30 ngày nếu lỗi con lăn, mất kết nối đầu thu USB hoặc pin sụt bất thường."

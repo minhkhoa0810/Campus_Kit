@@ -1,0 +1,394 @@
+{{ define "main" }}
+<!-- APPLE EDUCATION STORE SPLIT HEADER + LIVE COUNTDOWN CARD -->
+<section class="pt-8 sm:pt-12 pb-6 sm:pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
+      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <span class="text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Mã giảm giá</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end">
+      <div class="lg:col-span-7">
+        <p class="as-eyebrow text-xs font-semibold text-[#b64400] tracking-tight mb-2">
+          CampusKit Education Store
+        </p>
+        <h1 class="text-3xl sm:text-5xl font-semibold tracking-[-0.025em] text-[#1d1d1f] leading-[1.1]">
+          Trợ giá Giáo dục. <span class="text-[#6e6e73]">Tiết kiệm độc quyền cho sinh viên và mùa thi.</span>
+        </h1>
+      </div>
+
+      <!-- Sleek Apple Dark/White Live Countdown Card -->
+      <div class="lg:col-span-5 rounded-[24px] bg-[#1d1d1f] text-[#f5f5f7] p-5 sm:p-6 shadow-[2px_8px_24px_rgba(0,0,0,0.12)]">
+        <div class="flex items-center justify-between mb-3.5 gap-2">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold text-[#ff9f0a]">
+            <span class="w-2 h-2 rounded-full bg-[#ff9f0a] animate-pulse"></span>
+            <span>Ưu đãi Mùa thi Tháng 11</span>
+          </span>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-medium text-[#f5f5f7]">
+            Tiết kiệm đến 35%
+          </span>
+        </div>
+        <div class="grid grid-cols-4 gap-2.5 text-center" aria-label="Đồng hồ đếm ngược ưu đãi mùa thi">
+          <div class="rounded-[16px] bg-white text-[#1d1d1f] py-3 px-2 shadow-xs">
+            <span id="cdDays" class="block text-xl sm:text-2xl font-semibold leading-none tracking-tight tabular-nums">05</span>
+            <span class="text-[10px] text-[#6e6e73] font-medium mt-1.5 block">Ngày</span>
+          </div>
+          <div class="rounded-[16px] bg-white text-[#1d1d1f] py-3 px-2 shadow-xs">
+            <span id="cdHours" class="block text-xl sm:text-2xl font-semibold leading-none tracking-tight tabular-nums">14</span>
+            <span class="text-[10px] text-[#6e6e73] font-medium mt-1.5 block">Giờ</span>
+          </div>
+          <div class="rounded-[16px] bg-white text-[#1d1d1f] py-3 px-2 shadow-xs">
+            <span id="cdMinutes" class="block text-xl sm:text-2xl font-semibold leading-none tracking-tight tabular-nums">48</span>
+            <span class="text-[10px] text-[#6e6e73] font-medium mt-1.5 block">Phút</span>
+          </div>
+          <div class="rounded-[16px] bg-[#0071e3] text-white py-3 px-2 shadow-xs">
+            <span id="cdSeconds" class="block text-xl sm:text-2xl font-semibold leading-none tracking-tight tabular-nums">32</span>
+            <span class="text-[10px] text-white/90 font-medium mt-1.5 block">Giây</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: APPLE EDUCATION .EDU.VN VERIFICATION BENTO CARD -->
+<section class="py-4 sm:py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-[28px] shadow-[2px_4px_12px_rgba(0,0,0,0.06)] p-7 sm:p-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[#f5f5f7] px-3.5 py-1.5 text-xs font-semibold text-[#b64400]">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Xác thực Sinh viên Đại học &amp; Cao đẳng</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-[#1d1d1f] leading-tight">
+            Đặc quyền email .edu.vn. <span class="text-[#6e6e73]">Mở khóa giảm 15% không giới hạn đơn tối thiểu.</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-[#6e6e73] leading-relaxed">
+            Nhập địa chỉ email trường (<code class="rounded-md bg-[#f5f5f7] px-2 py-0.5 text-[#1d1d1f] font-medium">@*.edu.vn</code>) để kích hoạt ngay mã <strong class="font-semibold text-[#1d1d1f]">EDU15VIP</strong> — khấu trừ trực tiếp trong giỏ hàng cho mọi dụng cụ học tập và góc làm việc.
+          </p>
+          <div class="flex flex-wrap gap-x-5 gap-y-2 pt-1 text-xs text-[#1d1d1f] font-medium">
+            <span class="inline-flex items-center gap-1.5"><span class="text-[#0071e3]">✓</span> 0₫ giá trị đơn tối thiểu</span>
+            <span class="inline-flex items-center gap-1.5"><span class="text-[#0071e3]">✓</span> Xác thực tức thì 5 giây</span>
+            <span class="inline-flex items-center gap-1.5"><span class="text-[#0071e3]">✓</span> Giao KTX hỏa tốc 2 giờ</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <form id="eduVerifyForm" class="rounded-[22px] bg-[#f5f5f7] p-5 sm:p-7 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="eduSchoolSelect" class="block text-xs font-medium text-[#1d1d1f] mb-1.5">Trường Đại học / KTX</label>
+                <select id="eduSchoolSelect" class="w-full rounded-[14px] border border-[#d2d2d7] bg-white px-3.5 py-3 text-xs sm:text-[13px] text-[#1d1d1f] focus:outline-none focus:border-[#0071e3] focus:ring-2 focus:ring-[#0071e3]/15 transition-all">
+                  <option value="ĐH Bách Khoa — ĐHQG TP.HCM">ĐH Bách Khoa — ĐHQG TP.HCM</option>
+                  <option value="ĐH Công Nghệ Thông Tin (UIT)">ĐH Công Nghệ Thông Tin (UIT)</option>
+                  <option value="ĐH Kinh Tế - Luật (UEL)">ĐH Kinh Tế - Luật (UEL)</option>
+                  <option value="ĐH Khoa Học Tự Nhiên (HCMUS)">ĐH Khoa Học Tự Nhiên (HCMUS)</option>
+                  <option value="ĐH KHXH & Nhân Văn (USSH)">ĐH KHXH &amp; Nhân Văn (USSH)</option>
+                  <option value="ĐH Quốc Tế (IU) / ĐH Kinh Tế (UEH)">ĐH Quốc Tế (IU) / UEH / FTU</option>
+                  <option value="Trường Đại học / Cao đẳng khác">Trường Đại học / Cao đẳng khác</option>
+                </select>
+              </div>
+              <div>
+                <label for="eduEmailInput" class="block text-xs font-medium text-[#1d1d1f] mb-1.5">Email Sinh viên (.edu.vn)</label>
+                <input
+                  id="eduEmailInput"
+                  type="email"
+                  required
+                  placeholder="mssv@hcmut.edu.vn"
+                  class="w-full rounded-[14px] border border-[#d2d2d7] bg-white px-3.5 py-3 text-xs sm:text-[13px] text-[#1d1d1f] placeholder:text-[#86868b] focus:outline-none focus:border-[#0071e3] focus:ring-2 focus:ring-[#0071e3]/15 transition-all"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="as-pill-blue w-full rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white py-3.5 px-6 text-xs sm:text-sm font-medium transition-colors shadow-xs">
+              Xác thực &amp; Mở khóa mã EDU15VIP
+            </button>
+
+            <div id="eduVerifiedResult" class="hidden rounded-[16px] bg-white border border-[#0071e3]/25 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs">
+              <div>
+                <p id="eduVerifiedTitle" class="text-xs font-semibold text-[#0071e3]">ĐÃ XÁC THỰC SINH VIÊN</p>
+                <p class="text-xs text-[#6e6e73] mt-0.5">Mã mở khóa: <strong class="font-semibold text-[#1d1d1f]">EDU15VIP</strong> (Giảm 15% không giới hạn đơn tối thiểu)</p>
+              </div>
+              <button
+                type="button"
+                data-apply-voucher="EDU15VIP"
+                class="as-pill-blue shrink-0 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white px-5 py-2 text-xs font-medium transition-colors"
+              >
+                Áp dụng vào giỏ
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: VOUCHER SHELF / APPLE GIFT-CARD STYLE GRID -->
+<section class="py-6 sm:py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-7">
+      <div>
+        <h2 class="as-shelf-title text-2xl sm:text-4xl font-semibold tracking-[-0.022em] text-[#1d1d1f]">
+          Kho ưu đãi tháng 11. <span class="as-title-muted text-[#6e6e73]">Áp dụng trực tiếp chỉ với một chạm.</span>
+        </h2>
+      </div>
+
+      <!-- Apple Pill Filter Tabs -->
+      <div class="flex flex-wrap gap-2" id="voucherFilterBar">
+        <button type="button" data-voucher-filter="all" class="rounded-full px-4 py-2 text-xs font-medium border border-[#1d1d1f] bg-[#1d1d1f] text-white transition-colors">
+          Tất cả ({{ len hugo.Data.vouchers }})
+        </button>
+        <button type="button" data-voucher-filter="percent" class="rounded-full px-4 py-2 text-xs font-medium border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:border-[#86868b] transition-colors">
+          Giảm theo %
+        </button>
+        <button type="button" data-voucher-filter="fixed" class="rounded-full px-4 py-2 text-xs font-medium border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:border-[#86868b] transition-colors">
+          Trừ tiền trực tiếp
+        </button>
+        <button type="button" data-voucher-filter="edu" class="rounded-full px-4 py-2 text-xs font-medium border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:border-[#86868b] transition-colors">
+          Đặc quyền .edu.vn
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Apple Gift-Card Style Voucher Grid -->
+    <div id="voucherGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{ range hugo.Data.vouchers }}
+      <article
+        class="voucher-card bg-white rounded-[24px] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[2px_10px_26px_rgba(0,0,0,0.09)] transition-all duration-300 overflow-hidden flex flex-col justify-between"
+        data-voucher-type="{{ .type }}"
+        data-voucher-edu="{{ if .eduOnly }}true{{ else }}false{{ end }}"
+      >
+        <div>
+          <!-- Top Gift-Card Accent Header -->
+          {{ if .eduOnly }}
+          <div class="bg-[#1d1d1f] text-[#f5f5f7] p-6 pb-5">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold text-[#2997ff] tracking-tight">{{ .tag }}</span>
+              <span class="rounded-full bg-white/15 px-2.5 py-0.5 text-[10px] font-semibold text-white">.EDU.VN</span>
+            </div>
+            <div class="flex items-end justify-between gap-3">
+              <div>
+                {{ if eq .type "percent" }}
+                  <span class="text-3xl sm:text-4xl font-semibold tracking-[-0.03em] block leading-none">-{{ .value }}%</span>
+                {{ else }}
+                  <span class="text-3xl sm:text-4xl font-semibold tracking-[-0.03em] block leading-none">-{{ div .value 1000 }}K</span>
+                {{ end }}
+                <span class="text-xs text-[#a1a1a6] mt-1.5 block">
+                  {{ if gt .minOrder 0 }}Đơn từ {{ div .minOrder 1000 }}K{{ else }}Mọi giá trị đơn hàng{{ end }}
+                </span>
+              </div>
+              <span class="rounded-full bg-white/12 border border-white/20 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-white">
+                {{ .code }}
+              </span>
+            </div>
+          </div>
+          {{ else if eq .type "percent" }}
+          <div class="bg-gradient-to-br from-[#eaf3ff] via-[#f2f7ff] to-[#f8f9fc] p-6 pb-5 border-b border-[#e5ecf6]">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold text-[#0066cc] tracking-tight">{{ .tag }}</span>
+              <span class="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-medium text-[#6e6e73] shadow-xs">Ưu đãi %</span>
+            </div>
+            <div class="flex items-end justify-between gap-3">
+              <div>
+                <span class="text-3xl sm:text-4xl font-semibold tracking-[-0.03em] text-[#1d1d1f] block leading-none">-{{ .value }}%</span>
+                <span class="text-xs text-[#6e6e73] mt-1.5 block">
+                  {{ if gt .minOrder 0 }}Đơn từ {{ div .minOrder 1000 }}K{{ else }}Mọi giá trị đơn hàng{{ end }}
+                </span>
+              </div>
+              <span class="rounded-full bg-white border border-[#d2d2d7]/80 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-[#1d1d1f] shadow-xs">
+                {{ .code }}
+              </span>
+            </div>
+          </div>
+          {{ else }}
+          <div class="bg-gradient-to-br from-[#fff3eb] via-[#fff8f3] to-[#faf9f7] p-6 pb-5 border-b border-[#f3e7de]">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold text-[#b64400] tracking-tight">{{ .tag }}</span>
+              <span class="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-medium text-[#6e6e73] shadow-xs">Trừ trực tiếp</span>
+            </div>
+            <div class="flex items-end justify-between gap-3">
+              <div>
+                <span class="text-3xl sm:text-4xl font-semibold tracking-[-0.03em] text-[#1d1d1f] block leading-none">-{{ div .value 1000 }}K</span>
+                <span class="text-xs text-[#6e6e73] mt-1.5 block">
+                  {{ if gt .minOrder 0 }}Đơn từ {{ div .minOrder 1000 }}K{{ else }}Mọi giá trị đơn hàng{{ end }}
+                </span>
+              </div>
+              <span class="rounded-full bg-white border border-[#d2d2d7]/80 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-[#1d1d1f] shadow-xs">
+                {{ .code }}
+              </span>
+            </div>
+          </div>
+          {{ end }}
+
+          <!-- Card Description -->
+          <div class="p-6 pb-4">
+            <h3 class="text-base font-semibold text-[#1d1d1f] leading-snug tracking-[-0.01em] mb-1.5">
+              {{ .title }}
+            </h3>
+            <p class="text-xs text-[#6e6e73] leading-relaxed">
+              {{ .desc }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Progress & Pill Actions -->
+        <div class="px-6 pb-6 pt-2 space-y-4">
+          <div>
+            <div class="flex items-center justify-between text-[11px] text-[#6e6e73] mb-1.5">
+              <span>Đã dùng {{ .usedPercent }}%</span>
+              <span>HSD: {{ .expiry }}</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-[#f5f5f7] overflow-hidden">
+              <div class="h-full rounded-full bg-[#0071e3]" style="width: {{ .usedPercent }}%"></div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              data-copy-voucher="{{ .code }}"
+              class="as-pill-outline rounded-full border border-[#d2d2d7] hover:border-[#86868b] bg-white hover:bg-[#f5f5f7] text-[#1d1d1f] py-2.5 px-4 text-xs font-medium transition-colors shrink-0"
+            >
+              Sao chép
+            </button>
+            <button
+              type="button"
+              data-apply-voucher="{{ .code }}"
+              class="as-pill-blue flex-1 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white py-2.5 px-4 text-xs font-medium transition-colors text-center"
+            >
+              Áp dụng vào giỏ
+            </button>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 3: 3 APPLE STORE DIFFERENCE LOYALTY CARDS & CLEAN APPLE FAQ ACCORDION -->
+<section class="py-6 sm:py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+    <!-- Loyalty Tiers as 3 Apple Store Difference Cards -->
+    <div>
+      <div class="mb-6">
+        <h2 class="as-shelf-title text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+          Đặc quyền thành viên. <span class="as-title-muted text-[#6e6e73]">Thêm nhiều lý do để đồng hành suốt 4 năm đại học.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Tier 1 -->
+        <div class="bg-white rounded-[24px] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-[#f5f5f7] text-[#0071e3] flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <p class="text-xs font-semibold text-[#6e6e73] mb-1">Tân Sinh Viên • Miễn phí</p>
+            <h3 class="text-xl font-semibold tracking-[-0.015em] text-[#1d1d1f] leading-snug mb-4">
+              <span class="text-[#0071e3]">Giảm ngay 15%</span> đơn đầu tiên cho góc học tập mới.
+            </h3>
+          </div>
+          <ul class="text-xs text-[#6e6e73] space-y-2 pt-4 border-t border-[#f5f5f7]">
+            <li>• Mã chào mừng SINHVIEN11 giảm 15%</li>
+            <li>• Miễn phí giao KTX 2H đơn từ 199K</li>
+            <li>• Bảo hành 1 đổi 1 trong 30 ngày</li>
+          </ul>
+        </div>
+
+        <!-- Tier 2 (Recommended) -->
+        <div class="bg-white rounded-[24px] shadow-[2px_6px_20px_rgba(0,113,227,0.09)] ring-1 ring-[#0071e3]/25 p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-full bg-[#eaf3ff] text-[#0071e3] flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              </div>
+              <span class="rounded-full bg-[#0071e3] text-white px-3 py-1 text-[10px] font-semibold">Đề xuất</span>
+            </div>
+            <p class="text-xs font-semibold text-[#b64400] mb-1">Campus .edu.vn • Xác thực trường</p>
+            <h3 class="text-xl font-semibold tracking-[-0.015em] text-[#1d1d1f] leading-snug mb-4">
+              <span class="text-[#b64400]">0₫ đơn tối thiểu</span> quanh năm cùng mã EDU15VIP.
+            </h3>
+          </div>
+          <ul class="text-xs text-[#6e6e73] space-y-2 pt-4 border-t border-[#f5f5f7]">
+            <li>• Mã EDU15VIP giảm 15% mọi giá trị đơn</li>
+            <li>• Ưu tiên điều phối giao KTX trong 90 phút</li>
+            <li>• Quà tặng sổ tay B5 dịp sinh nhật mùa thi</li>
+          </ul>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="bg-white rounded-[24px] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-[#f5f5f7] text-[#1d1d1f] flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <p class="text-xs font-semibold text-[#6e6e73] mb-1">CLB &amp; Trưởng phòng KTX</p>
+            <h3 class="text-xl font-semibold tracking-[-0.015em] text-[#1d1d1f] leading-snug mb-4">
+              Gom đơn cùng phòng, <span class="text-[#0071e3]">tiết kiệm thẳng 100.000₫.</span>
+            </h3>
+          </div>
+          <ul class="text-xs text-[#6e6e73] space-y-2 pt-4 border-t border-[#f5f5f7]">
+            <li>• Chiết khấu nhóm tới 100.000₫ đơn từ 799K</li>
+            <li>• Tài trợ học phẩm sự kiện CLB sinh viên</li>
+            <li>• Đổi mới bảo hành tận sảnh tòa KTX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clean Apple Accordion FAQ -->
+    <div class="bg-white rounded-[28px] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] p-7 sm:p-10">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-[#1d1d1f] mb-6 text-center">
+          Câu hỏi thường gặp.
+        </h2>
+        <div class="divide-y divide-[#d2d2d7]/70 border-y border-[#d2d2d7]/70" id="voucherFaqList">
+          <div>
+            <button type="button" data-faq-toggle class="w-full py-5 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-semibold text-[#1d1d1f] hover:text-[#0066cc] transition-colors">
+              <span>Chưa có email .edu.vn có dùng được mã giảm giá không?</span>
+              <span data-faq-icon class="w-7 h-7 rounded-full bg-[#f5f5f7] flex items-center justify-center text-base font-medium text-[#6e6e73] shrink-0">−</span>
+            </button>
+            <div data-faq-body class="pb-5 text-xs sm:text-sm text-[#6e6e73] leading-relaxed">
+              Hoàn toàn được! Tân sinh viên chưa nhận email trường vẫn áp dụng được các mã <strong class="font-semibold text-[#1d1d1f]">SINHVIEN11</strong> (-15% đơn từ 199K), <strong class="font-semibold text-[#1d1d1f]">COMBOTHI50</strong> và <strong class="font-semibold text-[#1d1d1f]">FREESHIPKTX</strong>.
+            </div>
+          </div>
+          <div>
+            <button type="button" data-faq-toggle class="w-full py-5 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-semibold text-[#1d1d1f] hover:text-[#0066cc] transition-colors">
+              <span>Bấm "Áp dụng vào giỏ" xong kiểm tra ở đâu?</span>
+              <span data-faq-icon class="w-7 h-7 rounded-full bg-[#f5f5f7] flex items-center justify-center text-base font-medium text-[#6e6e73] shrink-0">+</span>
+            </button>
+            <div data-faq-body class="hidden pb-5 text-xs sm:text-sm text-[#6e6e73] leading-relaxed">
+              Hệ thống tự động gắn mã ưu đãi vào Giỏ hàng và mở ngăn Giỏ hàng bên phải màn hình để bạn kiểm tra ngay số tiền được khấu trừ trực tiếp trên tổng đơn.
+            </div>
+          </div>
+          <div>
+            <button type="button" data-faq-toggle class="w-full py-5 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-semibold text-[#1d1d1f] hover:text-[#0066cc] transition-colors">
+              <span>Gom đơn cùng phòng KTX nhận hàng như thế nào?</span>
+              <span data-faq-icon class="w-7 h-7 rounded-full bg-[#f5f5f7] flex items-center justify-center text-base font-medium text-[#6e6e73] shrink-0">+</span>
+            </button>
+            <div data-faq-body class="hidden pb-5 text-xs sm:text-sm text-[#6e6e73] leading-relaxed">
+              CampusKit đóng gói phân loại theo từng sản phẩm kèm hóa đơn chi tiết để các bạn cùng phòng dễ chia đơn, giao hỏa tốc đến đúng sảnh tòa KTX Khu A / Khu B trong vòng 2 giờ.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{{ end }}

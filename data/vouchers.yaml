@@ -1,0 +1,77 @@
+- code: "SINHVIEN11"
+  title: "Giảm 15% Toàn Bộ Đơn Mùa Thi"
+  tag: "PHỔ BIẾN NHẤT"
+  type: "percent"
+  value: 15
+  maxDiscount: 70000
+  minOrder: 199000
+  categoryReq: "all"
+  eduOnly: false
+  usedPercent: 78
+  expiry: "30/11/2026"
+  desc: "Áp dụng cho mọi sản phẩm tại CampusKit với đơn hàng từ 199.000₫ (Giảm tối đa 70.000₫)."
+
+- code: "EDU15VIP"
+  title: "Đặc Quyền Sinh Viên .EDU.VN (-15%)"
+  tag: "ĐẶC QUYỀN .EDU.VN"
+  type: "percent"
+  value: 15
+  maxDiscount: 150000
+  minOrder: 0
+  categoryReq: "all"
+  eduOnly: true
+  usedPercent: 42
+  expiry: "31/12/2026"
+  desc: "Không yêu cầu giá trị đơn tối thiểu (Tối đa 150.000₫). Dành cho tài khoản đã xác thực email trường .edu.vn."
+
+- code: "COMBOTHI50"
+  title: "Giảm Ngay 50.000₫ Đơn Trang Bị Bàn Học"
+  tag: "MÙA THI CUỐI KỲ"
+  type: "fixed"
+  value: 50000
+  maxDiscount: 50000
+  minOrder: 399000
+  categoryReq: "all"
+  eduOnly: false
+  usedPercent: 64
+  expiry: "30/11/2026"
+  desc: "Giảm trực tiếp 50.000₫ cho đơn hàng từ 399.000₫ khi nâng cấp góc học tập mùa ôn thi."
+
+- code: "NHOMKTX100"
+  title: "Mua Chung Phòng KTX — Giảm 100.000₫"
+  tag: "GOM ĐƠN CÙNG PHÒNG"
+  type: "fixed"
+  value: 100000
+  maxDiscount: 100000
+  minOrder: 799000
+  categoryReq: "all"
+  eduOnly: false
+  usedPercent: 51
+  expiry: "30/11/2026"
+  desc: "Rủ bạn cùng phòng KTX gom đơn từ 799.000₫ để giảm thẳng 100.000₫ và miễn phí giao 2H tận sảnh tòa."
+
+- code: "DEALDEM30"
+  title: "Trợ Giá Ôn Thi Đêm — Giảm 30.000₫"
+  tag: "FLASH SALE ĐÊM"
+  type: "fixed"
+  value: 30000
+  maxDiscount: 30000
+  minOrder: 249000
+  categoryReq: "all"
+  eduOnly: false
+  usedPercent: 85
+  expiry: "25/11/2026"
+  desc: "Ưu đãi 30.000₫ cho đơn từ 249.000₫ gồm đèn học chống cận, đồng hồ Pomodoro hoặc sổ còng."
+
+- code: "FREESHIPKTX"
+  title: "Miễn Phí Giao Nhanh 2H Làng Đại Học"
+  tag: "GIAO NHANH 2H"
+  type: "fixed"
+  value: 25000
+  maxDiscount: 25000
+  minOrder: 149000
+  categoryReq: "all"
+  eduOnly: false
+  usedPercent: 35
+  expiry: "31/12/2026"
+  desc: "Trợ giá 25.000₫ phí giao hỏa tốc 2 giờ tới KTX Khu A, Khu B ĐHQG TP.HCM & các quận nội thành (Đơn từ 149K)."

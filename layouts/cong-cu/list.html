@@ -1,0 +1,402 @@
+{{ define "main" }}
+<!-- APPLE CONTINUITY STUDY HUB SPLIT HEADER -->
+<section class="pt-8 sm:pt-12 pb-6 sm:pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
+      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <span class="text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Công cụ học tập</span>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="max-w-3xl">
+        <p class="as-eyebrow text-xs font-semibold text-[#b64400] tracking-tight mb-2">
+          CampusKit Continuity Tools
+        </p>
+        <h1 class="text-3xl sm:text-5xl font-semibold tracking-[-0.025em] text-[#1d1d1f] leading-[1.1]">
+          Study Hub. <span class="text-[#6e6e73]">Bộ công cụ tập trung miễn phí cho mùa thi.</span>
+        </h1>
+      </div>
+
+      <!-- Quick Anchor Pills -->
+      <div class="flex flex-wrap gap-2.5 shrink-0">
+        <a href="#tool-pomodoro" class="rounded-full bg-white hover:bg-[#1d1d1f] text-[#1d1d1f] hover:text-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] px-4 py-2.5 text-xs font-medium transition-all inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#0071e3]"></span>
+          <span>Pomodoro Focus</span>
+        </a>
+        <a href="#tool-whitenoise" class="rounded-full bg-white hover:bg-[#1d1d1f] text-[#1d1d1f] hover:text-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] px-4 py-2.5 text-xs font-medium transition-all inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#34c759]"></span>
+          <span>Background Sounds</span>
+        </a>
+        <a href="#tool-exam" class="rounded-full bg-white hover:bg-[#1d1d1f] text-[#1d1d1f] hover:text-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] px-4 py-2.5 text-xs font-medium transition-all inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#ff9f0a]"></span>
+          <span>Lịch thi &amp; Checklist</span>
+        </a>
+        <a href="#tool-deadline" class="rounded-full bg-white hover:bg-[#1d1d1f] text-[#1d1d1f] hover:text-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] px-4 py-2.5 text-xs font-medium transition-all inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#af52de]"></span>
+          <span>Deadline &amp; To-Do</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENTO WIDGETS ROW: POMODORO FOCUS + BACKGROUND SOUNDS MIXER -->
+<section class="py-3 sm:py-5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-7 items-stretch">
+
+      <!-- WIDGET 1: POMODORO FOCUS TIMER + REMINDERS CHECKLIST -->
+      <div id="tool-pomodoro" class="scroll-mt-24 lg:col-span-7 bg-white rounded-[28px] shadow-[2px_4px_12px_rgba(0,0,0,0.06)] p-7 sm:p-9 flex flex-col justify-between">
+        <div>
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-5 mb-6 border-b border-[#d2d2d7]/60">
+            <div>
+              <p class="text-xs font-semibold text-[#b64400] tracking-tight mb-0.5">Focus Mode</p>
+              <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+                Đồng hồ Pomodoro. <span class="text-[#6e6e73]">Giữ nhịp học sâu.</span>
+              </h2>
+            </div>
+            <span id="pomoSessionCount" class="rounded-full bg-[#f5f5f7] px-4 py-1.5 text-xs font-medium text-[#1d1d1f]">
+              Hoàn thành: 0 phiên
+            </span>
+          </div>
+
+          <!-- iPadOS-style Mode Selector -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 p-1.5 rounded-[18px] bg-[#f5f5f7]" id="pomoModeBar">
+            <button type="button" data-pomo-mode="focus" data-minutes="25" class="rounded-xl py-2.5 px-3 text-xs font-semibold border border-[#1d1d1f] bg-[#1d1d1f] text-white shadow-xs transition-all">
+              Tập trung (25p)
+            </button>
+            <button type="button" data-pomo-mode="short" data-minutes="5" class="rounded-xl py-2.5 px-3 text-xs font-medium border border-transparent bg-white/80 text-[#1d1d1f] hover:bg-white transition-all">
+              Nghỉ ngắn (05p)
+            </button>
+            <button type="button" data-pomo-mode="long" data-minutes="15" class="rounded-xl py-2.5 px-3 text-xs font-medium border border-transparent bg-white/80 text-[#1d1d1f] hover:bg-white transition-all">
+              Nghỉ dài (15p)
+            </button>
+            <button type="button" data-pomo-mode="deep" data-minutes="50" class="rounded-xl py-2.5 px-3 text-xs font-medium border border-transparent bg-white/80 text-[#1d1d1f] hover:bg-white transition-all">
+              Deep Work (50p)
+            </button>
+          </div>
+
+          <!-- macOS / iPadOS Clock Widget Surface -->
+          <div class="rounded-[24px] bg-[#f5f5f7] p-7 sm:p-10 text-center mb-6">
+            <p id="pomoStatusText" class="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6e6e73] mb-3">
+              SẴN SÀNG BẮT ĐẦU PHIÊN TẬP TRUNG
+            </p>
+            <div id="pomoClockDisplay" class="text-6xl sm:text-7xl md:text-8xl font-semibold tracking-[-0.04em] text-[#1d1d1f] leading-none tabular-nums my-2">
+              25:00
+            </div>
+            <div class="w-full max-w-md mx-auto h-2 rounded-full bg-[#e5e5ea] mt-6 overflow-hidden">
+              <div id="pomoProgressBar" class="h-full rounded-full bg-[#0071e3] transition-all duration-300" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <!-- Apple Pill Controls -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+            <button id="pomoStartPauseBtn" type="button" class="as-pill-blue sm:col-span-2 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white py-3.5 px-6 text-xs sm:text-sm font-medium tracking-wide transition-colors shadow-xs">
+              BẮT ĐẦU NGAY
+            </button>
+            <div class="grid grid-cols-2 gap-2.5">
+              <button id="pomoPlus5Btn" type="button" title="Cộng thêm 5 phút" class="rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] py-3.5 text-xs font-semibold transition-colors">
+                +5 phút
+              </button>
+              <button id="pomoResetBtn" type="button" title="Đặt lại đồng hồ" class="rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] text-[#1d1d1f] py-3.5 text-xs font-semibold transition-colors">
+                Đặt lại
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Reminders-style Session Checklist -->
+        <div class="pt-5 border-t border-[#d2d2d7]/60">
+          <h3 class="text-xs font-semibold text-[#1d1d1f] mb-3">
+            Mục tiêu cần hoàn thành trong ca học này
+          </h3>
+          <form id="pomoTaskForm" class="flex items-center gap-2 rounded-full bg-[#f5f5f7] p-1.5 pl-4 focus-within:ring-2 focus-within:ring-[#0071e3]/20 mb-3 transition-all">
+            <input
+              id="pomoTaskInput"
+              type="text"
+              placeholder="Nhập đầu việc (VD: Giải đề Giải tích, Thuộc 40 từ vựng)..."
+              class="w-full bg-transparent py-1.5 text-xs sm:text-[13px] text-[#1d1d1f] placeholder:text-[#86868b] focus:outline-none"
+            />
+            <button type="submit" class="as-pill-blue rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white px-4 py-2 text-xs font-medium shrink-0 transition-colors">
+              + Thêm
+            </button>
+          </form>
+          <ul id="pomoTaskList" class="divide-y divide-[#e5e5ea] rounded-[18px] bg-[#f5f5f7]/70 overflow-hidden"></ul>
+        </div>
+      </div>
+
+      <!-- WIDGET 2: MACOS CONTROL CENTER BACKGROUND SOUNDS SYNTHESIZER -->
+      <div id="tool-whitenoise" class="scroll-mt-24 lg:col-span-5 bg-white rounded-[28px] shadow-[2px_4px_12px_rgba(0,0,0,0.06)] p-7 sm:p-9 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 pb-5 mb-5 border-b border-[#d2d2d7]/60">
+            <div>
+              <p class="text-xs font-semibold text-[#0071e3] tracking-tight mb-0.5">Background Sounds</p>
+              <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+                Âm thanh nền tập trung.
+              </h2>
+            </div>
+            <span id="soundMasterBadge" class="rounded-full bg-[#f5f5f7] px-3.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#6e6e73]">
+              ĐANG TẮT
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-[13px] text-[#6e6e73] leading-relaxed mb-5">
+            Tổng hợp trực tiếp qua Web Audio để lọc tiếng ồn phòng KTX. Bạn có thể <strong class="font-semibold text-[#1d1d1f]">phối hợp nhiều kênh âm thanh cùng lúc</strong>.
+          </p>
+
+          <div class="space-y-3" id="whiteNoiseChannels">
+            <!-- Channel 1: Rain -->
+            <div class="rounded-[20px] bg-[#f5f5f7] p-4">
+              <div class="flex items-center justify-between mb-3 gap-2">
+                <div>
+                  <h3 class="text-xs sm:text-[13px] font-semibold text-[#1d1d1f]">Mưa rơi đều ngoài cửa sổ</h3>
+                  <p class="text-[11px] text-[#6e6e73]">Tần số dịu nhẹ làm mát tâm trí khi đọc giáo trình</p>
+                </div>
+                <button type="button" data-sound-toggle="rain" class="rounded-full px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-widest border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#0071e3] hover:text-white hover:border-[#0071e3] transition-all shrink-0">
+                  BẬT
+                </button>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[11px] text-[#6e6e73] w-14">Âm lượng</span>
+                <input type="range" min="5" max="100" value="55" data-sound-vol="rain" class="ck-range flex-1 accent-[#0071e3]" />
+                <span data-sound-label="rain" class="text-xs font-semibold text-[#1d1d1f] w-9 text-right tabular-nums">55%</span>
+              </div>
+            </div>
+
+            <!-- Channel 2: Brown Noise -->
+            <div class="rounded-[20px] bg-[#f5f5f7] p-4">
+              <div class="flex items-center justify-between mb-3 gap-2">
+                <div>
+                  <h3 class="text-xs sm:text-[13px] font-semibold text-[#1d1d1f]">Thư viện trầm ấm (Brown Noise)</h3>
+                  <p class="text-[11px] text-[#6e6e73]">Âm trầm sâu triệt tiêu tiếng nói chuyện phòng KTX</p>
+                </div>
+                <button type="button" data-sound-toggle="brown" class="rounded-full px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-widest border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#0071e3] hover:text-white hover:border-[#0071e3] transition-all shrink-0">
+                  BẬT
+                </button>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[11px] text-[#6e6e73] w-14">Âm lượng</span>
+                <input type="range" min="5" max="100" value="65" data-sound-vol="brown" class="ck-range flex-1 accent-[#0071e3]" />
+                <span data-sound-label="brown" class="text-xs font-semibold text-[#1d1d1f] w-9 text-right tabular-nums">65%</span>
+              </div>
+            </div>
+
+            <!-- Channel 3: White Noise -->
+            <div class="rounded-[20px] bg-[#f5f5f7] p-4">
+              <div class="flex items-center justify-between mb-3 gap-2">
+                <div>
+                  <h3 class="text-xs sm:text-[13px] font-semibold text-[#1d1d1f]">Tiếng ồn trắng cân bằng</h3>
+                  <p class="text-[11px] text-[#6e6e73]">Dải tần phẳng duy trì tốc độ giải đề trắc nghiệm</p>
+                </div>
+                <button type="button" data-sound-toggle="white" class="rounded-full px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-widest border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#0071e3] hover:text-white hover:border-[#0071e3] transition-all shrink-0">
+                  BẬT
+                </button>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[11px] text-[#6e6e73] w-14">Âm lượng</span>
+                <input type="range" min="5" max="100" value="40" data-sound-vol="white" class="ck-range flex-1 accent-[#0071e3]" />
+                <span data-sound-label="white" class="text-xs font-semibold text-[#1d1d1f] w-9 text-right tabular-nums">40%</span>
+              </div>
+            </div>
+
+            <!-- Channel 4: Focus Drone -->
+            <div class="rounded-[20px] bg-[#f5f5f7] p-4">
+              <div class="flex items-center justify-between mb-3 gap-2">
+                <div>
+                  <h3 class="text-xs sm:text-[13px] font-semibold text-[#1d1d1f]">Sóng âm Ambient đêm khuya</h3>
+                  <p class="text-[11px] text-[#6e6e73]">Hòa âm tần số thấp êm dịu cho phiên làm đồ án</p>
+                </div>
+                <button type="button" data-sound-toggle="ambient" class="rounded-full px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-widest border border-[#d2d2d7] bg-white text-[#1d1d1f] hover:bg-[#0071e3] hover:text-white hover:border-[#0071e3] transition-all shrink-0">
+                  BẬT
+                </button>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[11px] text-[#6e6e73] w-14">Âm lượng</span>
+                <input type="range" min="5" max="100" value="35" data-sound-vol="ambient" class="ck-range flex-1 accent-[#0071e3]" />
+                <span data-sound-label="ambient" class="text-xs font-semibold text-[#1d1d1f] w-9 text-right tabular-nums">35%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <button id="stopAllSoundsBtn" type="button" class="w-full rounded-full bg-[#f5f5f7] hover:bg-[#1d1d1f] text-[#1d1d1f] hover:text-white py-3.5 px-5 text-xs font-semibold transition-colors">
+            Tắt tất cả âm thanh
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WIDGETS 3 & 4: EXAM COUNTDOWN + CHECKLIST & DEADLINE TRACKER (2 COLUMNS) -->
+<section class="py-4 sm:py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-7 items-stretch">
+
+      <!-- WIDGET 3: ĐẾM NGƯỢC LỊCH THI & CHECKLIST PHÒNG THI -->
+      <div id="tool-exam" class="scroll-mt-24 lg:col-span-6 bg-white rounded-[28px] shadow-[2px_4px_12px_rgba(0,0,0,0.06)] p-6 sm:p-8 flex flex-col justify-between space-y-6">
+        <div class="space-y-5">
+          <div class="pb-4 border-b border-[#d2d2d7]/60">
+            <p class="text-xs font-semibold text-[#b64400] tracking-tight mb-0.5">Exam Readiness</p>
+            <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+              Lịch thi &amp; Checklist phòng thi.
+            </h2>
+            <p class="text-xs text-[#6e6e73] mt-1">Theo dõi ngày thi và kiểm tra đủ đồ dùng trước khi ra khỏi nhà.</p>
+          </div>
+
+          <!-- Add Exam Form -->
+          <form id="examCountdownForm" class="grid grid-cols-1 sm:grid-cols-12 gap-2">
+            <input
+              id="examNameInput"
+              type="text"
+              required
+              placeholder="Tên môn thi (VD: Giải tích 1B)..."
+              class="sm:col-span-6 rounded-2xl border border-[#d2d2d7] bg-[#f5f5f7]/60 focus:bg-white focus:border-[#0071e3] px-3.5 py-2.5 text-xs text-[#1d1d1f] placeholder-[#86868b] focus:outline-none transition-colors"
+            />
+            <input
+              id="examDateInput"
+              type="date"
+              required
+              aria-label="Ngày thi"
+              class="sm:col-span-4 rounded-2xl border border-[#d2d2d7] bg-[#f5f5f7]/60 focus:bg-white focus:border-[#0071e3] px-3 py-2.5 text-xs text-[#1d1d1f] focus:outline-none transition-colors"
+            />
+            <button
+              type="submit"
+              class="sm:col-span-2 as-pill-blue rounded-2xl py-2.5 px-3 text-xs font-medium whitespace-nowrap"
+            >
+              + Thêm
+            </button>
+          </form>
+
+          <!-- Exam Countdown List -->
+          <ul id="examList" class="space-y-2"></ul>
+        </div>
+
+        <!-- Exam Packing Checklist -->
+        <div class="rounded-[22px] bg-[#f5f5f7] p-5 space-y-3.5">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <h3 class="text-sm font-semibold text-[#1d1d1f]">Checklist mang vào phòng thi</h3>
+              <p class="text-[11px] text-[#6e6e73]">Tick kiểm tra trước giờ thi • Thiếu món nào bấm mua nhanh</p>
+            </div>
+            <span id="examChecklistProgress" class="rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-[#0071e3] shadow-xs shrink-0">
+              0/5 món
+            </span>
+          </div>
+
+          <div class="w-full h-1.5 rounded-full bg-[#e5e5ea] overflow-hidden">
+            <div id="examChecklistBar" class="h-full bg-[#0071e3] rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+
+          <ul id="examChecklist" class="space-y-2"></ul>
+        </div>
+      </div>
+
+      <!-- WIDGET 4: QUẢN LÝ DEADLINE & TO-DO MÙA THI -->
+      <div id="tool-deadline" class="scroll-mt-24 lg:col-span-6 bg-white rounded-[28px] shadow-[2px_4px_12px_rgba(0,0,0,0.06)] p-6 sm:p-8 flex flex-col justify-between space-y-5">
+        <div class="space-y-5">
+          <div class="flex items-start justify-between gap-3 pb-4 border-b border-[#d2d2d7]/60">
+            <div>
+              <p class="text-xs font-semibold text-[#0071e3] tracking-tight mb-0.5">Deadline Tracker</p>
+              <h2 class="text-xl sm:text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+                Quản lý Deadline &amp; To-Do.
+              </h2>
+              <p class="text-xs text-[#6e6e73] mt-1">Ghi nhanh bài tập, đồ án cần nộp để dùng cùng Pomodoro.</p>
+            </div>
+            <span id="deadlineProgressBadge" class="rounded-full bg-[#f5f5f7] px-3.5 py-1.5 text-xs font-semibold text-[#1d1d1f] shrink-0">
+              0/0 việc
+            </span>
+          </div>
+
+          <!-- Add Deadline Form -->
+          <form id="deadlineForm" class="space-y-2">
+            <input
+              id="deadlineTitleInput"
+              type="text"
+              required
+              placeholder="Tên bài tập / đồ án (VD: Nộp đồ án Hugo CampusKit)..."
+              class="w-full rounded-2xl border border-[#d2d2d7] bg-[#f5f5f7]/60 focus:bg-white focus:border-[#0071e3] px-3.5 py-2.5 text-xs text-[#1d1d1f] placeholder-[#86868b] focus:outline-none transition-colors"
+            />
+            <div class="grid grid-cols-12 gap-2">
+              <select
+                id="deadlinePrioritySelect"
+                aria-label="Mức độ ưu tiên"
+                class="col-span-5 rounded-2xl border border-[#d2d2d7] bg-[#f5f5f7]/60 focus:bg-white focus:border-[#0071e3] px-3 py-2 text-xs text-[#1d1d1f] focus:outline-none"
+              >
+                <option value="high">Ưu tiên: Gấp</option>
+                <option value="week" selected>Ưu tiên: Tuần này</option>
+                <option value="normal">Ưu tiên: Bình thường</option>
+              </select>
+              <input
+                id="deadlineDueInput"
+                type="date"
+                aria-label="Hạn nộp"
+                class="col-span-4 rounded-2xl border border-[#d2d2d7] bg-[#f5f5f7]/60 focus:bg-white focus:border-[#0071e3] px-2.5 py-2 text-xs text-[#1d1d1f] focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="col-span-3 as-pill-blue rounded-2xl py-2 px-3 text-xs font-medium whitespace-nowrap"
+              >
+                + Thêm việc
+              </button>
+            </div>
+          </form>
+
+          <!-- Filter Pills -->
+          <div id="deadlineFilterBar" class="flex items-center gap-2">
+            <button type="button" data-dl-filter="all" class="rounded-full px-3.5 py-1.5 text-xs font-semibold bg-[#1d1d1f] text-white transition-colors">Tất cả</button>
+            <button type="button" data-dl-filter="active" class="rounded-full px-3.5 py-1.5 text-xs font-medium bg-[#f5f5f7] text-[#424245] hover:bg-[#e8e8ed] transition-colors">Đang làm</button>
+            <button type="button" data-dl-filter="done" class="rounded-full px-3.5 py-1.5 text-xs font-medium bg-[#f5f5f7] text-[#424245] hover:bg-[#e8e8ed] transition-colors">Đã xong</button>
+          </div>
+
+          <!-- Deadline List -->
+          <ul id="deadlineList" class="space-y-2.5 max-h-[360px] overflow-y-auto pr-1"></ul>
+        </div>
+
+        <div class="pt-2 border-t border-[#d2d2d7]/50 flex items-center justify-between text-[11.5px] text-[#6e6e73]">
+          <span>Tự động lưu trên trình duyệt của bạn</span>
+          <button id="clearDoneDeadlinesBtn" type="button" class="text-[#0066cc] hover:underline font-medium">
+            Xóa việc đã xong
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDED PHYSICAL STUDY COMPANIONS SHELF -->
+<section class="py-6 sm:py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <h2 class="as-shelf-title text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">
+          Phụ kiện tăng sự tập trung. <span class="as-title-muted text-[#6e6e73]">Đồng bộ hoàn hảo cùng Study Hub.</span>
+        </h2>
+      </div>
+      <a href="{{ "/san-pham/?cat=Năng suất" | relURL }}" class="text-xs sm:text-sm font-medium text-[#0066cc] hover:underline shrink-0">
+        Xem tất cả phụ kiện ›
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {{ range where hugo.Data.products "category" "Năng suất" }}
+      <div class="bg-white rounded-[24px] shadow-[2px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[2px_8px_22px_rgba(0,0,0,0.09)] transition-shadow p-5 flex gap-4 items-center">
+        <img src="{{ .image | relURL }}" alt="{{ .name }}" data-quick-view="{{ .id }}" class="w-24 h-24 rounded-[16px] bg-[#f5f5f7] object-cover shrink-0 cursor-pointer" />
+        <div class="min-w-0 flex-1">
+          <p class="text-[11px] font-semibold text-[#b64400] mb-0.5">{{ .subCategory }}</p>
+          <h3 data-quick-view="{{ .id }}" class="text-sm font-semibold text-[#1d1d1f] hover:text-[#0066cc] line-clamp-2 leading-snug cursor-pointer transition-colors">{{ .name }}</h3>
+          <p class="text-sm font-semibold text-[#1d1d1f] mt-1.5">{{ lang.FormatNumber 0 .price }}₫</p>
+          <button type="button" data-add-cart="{{ .id }}" class="as-pill-blue mt-2.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs font-medium px-4 py-1.5 transition-colors">
+            + Thêm giỏ
+          </button>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

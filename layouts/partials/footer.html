@@ -1,0 +1,177 @@
+<!-- APPLE STORE VIETNAM INSPIRED QUICK LINKS, FOOTNOTES & DIRECTORY FOOTER -->
+<footer class="bg-[#F5F5F7] text-[#1d1d1f] pt-10 pb-8 mt-8 border-t border-[#d2d2d7]/70">
+  <div class="max-w-[1024px] mx-auto px-4 sm:px-6">
+
+    <!-- 1. Quick Links Shelf ("Liên Kết Nhanh") -->
+    <div class="pb-9">
+      <h2 class="text-xl font-semibold text-[#1d1d1f] tracking-[-0.018em] mb-4">Liên Kết Nhanh</h2>
+      <div class="flex flex-wrap items-center gap-2.5">
+        <a href="{{ "gioi-thieu/" | relURL }}" class="as-pill-outline">
+          <span>Về CampusKit</span>
+          <span aria-hidden="true" class="text-[11px] opacity-75">↗</span>
+        </a>
+        <a href="{{ "tra-cuu/" | relURL }}" class="as-pill-outline">
+          <span>Trạng Thái Đơn Hàng</span>
+          <span aria-hidden="true" class="text-[11px] opacity-75">↗</span>
+        </a>
+        <a href="{{ "ma-giam-gia/" | relURL }}" class="as-pill-outline">
+          <span>Ưu Đãi Sinh Viên .edu.vn</span>
+          <span aria-hidden="true" class="text-[11px] opacity-75">↗</span>
+        </a>
+        <a href="{{ "cong-cu/" | relURL }}" class="as-pill-outline">
+          <span>Study Hub: Pomodoro, Lịch thi &amp; Deadline</span>
+          <span aria-hidden="true" class="text-[11px] opacity-75">↗</span>
+        </a>
+        <a href="{{ "combo/" | relURL }}" class="as-pill-outline">
+          <span>Combo Tiết Kiệm</span>
+          <span aria-hidden="true" class="text-[11px] opacity-75">↗</span>
+        </a>
+        <button type="button" data-info-modal="shipping-policy" class="as-pill-outline">
+          <span>Đổi Trả 30 Ngày</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. Store & Education Footnotes -->
+    <div class="text-[11px] text-[#6e6e73] leading-relaxed border-b border-[#d2d2d7] pb-5 mb-5 space-y-2">
+      <p>
+        * Giá niêm yết đã bao gồm thuế GTGT theo quy định pháp luật Việt Nam. Miễn phí giao nhanh 2 giờ tận sảnh Ký túc xá Khu A, Khu B ĐHQG TP.HCM và khu vực lân cận cho mọi đơn hàng đủ điều kiện từ 199.000₫. Chính sách bảo hành 1 đổi 1 tận sảnh trong 30 ngày đầu áp dụng cho toàn bộ thiết bị điện tử bàn học chính hãng.
+      </p>
+      <p>
+        ◊ Mức tiết kiệm 15% theo Chương trình Ưu đãi Giáo dục CampusKit dành cho sinh viên đại học, cao đẳng đang theo học hoặc tân sinh viên mới trúng tuyển tại Việt Nam xác thực bằng email học vụ đuôi <strong class="font-medium text-[#424245]">.edu.vn</strong> (mã <strong class="font-medium text-[#424245]">EDU15VIP</strong> giảm 15% tối đa 150.000₫) hoặc sử dụng mã mùa thi <strong class="font-medium text-[#424245]">{{ .Site.Params.promoCode | default "SINHVIEN11" }}</strong> cho đơn từ 199.000₫.
+      </p>
+    </div>
+
+    <!-- 3. Apple Directory Breadcrumb -->
+    <nav aria-label="Đường dẫn trang" class="flex items-center gap-2 text-[12px] text-[#424245] mb-6">
+      <a href="{{ "/" | relURL }}" class="inline-flex items-center gap-2 text-[#1d1d1f] hover:underline">
+        <img src="{{ "/images/logo-icon.png" | relURL }}" alt="Logo {{ .Site.Params.brandName | default "CampusKit" }}" class="w-6 h-6 rounded-[6px] shadow-sm shrink-0" />
+        <span class="text-[13.5px] tracking-[-0.02em]"><strong class="font-bold">Campus</strong><span class="font-normal">Kit</span></span>
+      </a>
+      <span aria-hidden="true" class="text-[#86868b] text-[13px]">›</span>
+      <span class="text-[#6e6e73]">Cửa Hàng Trực Tuyến</span>
+    </nav>
+
+    <!-- 4. 4-Column Apple Store Directory -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-7 border-b border-[#d2d2d7] text-[12px]">
+
+      <!-- Column 1: Khám Phá & Mua Sắm -->
+      <div>
+        <h3 class="text-[12px] font-semibold text-[#1d1d1f] tracking-[-0.01em] mb-2.5">Khám Phá &amp; Mua Sắm</h3>
+        <ul class="space-y-2 text-[#424245]">
+          <li>
+            <a href="{{ "san-pham/" | relURL }}" class="hover:text-[#1d1d1f] hover:underline transition-colors">Tất Cả Học Cụ</a>
+          </li>
+          {{ range .Site.Menus.categories }}
+            {{ if ne .Identifier "all" }}
+            <li>
+              <button
+                type="button"
+                data-footer-cat="{{ .Identifier }}"
+                class="text-left hover:text-[#1d1d1f] hover:underline transition-colors"
+              >
+                {{ .Name }}
+              </button>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Column 2: Tiện Ích Sinh Viên -->
+      <div>
+        <h3 class="text-[12px] font-semibold text-[#1d1d1f] tracking-[-0.01em] mb-2.5">Tiện Ích Sinh Viên</h3>
+        <ul class="space-y-2 text-[#424245]">
+          <li>
+            <a href="{{ "san-pham/" | relURL }}" class="hover:text-[#1d1d1f] hover:underline transition-colors">Danh Mục Sản Phẩm</a>
+          </li>
+          <li>
+            <a href="{{ "ma-giam-gia/" | relURL }}" class="hover:text-[#1d1d1f] hover:underline transition-colors">Mã Giảm Giá &amp; .edu.vn</a>
+          </li>
+          <li>
+            <a href="{{ "cong-cu/" | relURL }}" class="hover:text-[#1d1d1f] hover:underline transition-colors">Công Cụ Học Tập</a>
+          </li>
+          <li>
+            <a href="{{ "combo/" | relURL }}" class="hover:text-[#1d1d1f] hover:underline transition-colors">Combo Tiết Kiệm</a>
+          </li>
+          <li>
+            <a href="{{ "tra-cuu/" | relURL }}" class="hover:text-[#1d1d1f] hover:underline transition-colors">Tra Cứu Đơn &amp; Bảo Hành</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Về CampusKit & Hỗ Trợ -->
+      <div>
+        <h3 class="text-[12px] font-semibold text-[#1d1d1f] tracking-[-0.01em] mb-2.5">Về CampusKit &amp; Hỗ Trợ</h3>
+        <ul class="space-y-2 text-[#424245]">
+          <li>
+            <a href="{{ "gioi-thieu/" | relURL }}" class="font-medium text-[#1d1d1f] hover:text-[#0066cc] hover:underline transition-colors">
+              Giới thiệu CampusKit ›
+            </a>
+          </li>
+          <li>
+            <button type="button" data-info-modal="student-policy" class="text-left hover:text-[#1d1d1f] hover:underline transition-colors">
+              Ưu đãi Sinh viên (.edu.vn)
+            </button>
+          </li>
+          <li>
+            <button type="button" data-info-modal="shipping-policy" class="text-left hover:text-[#1d1d1f] hover:underline transition-colors">
+              Giao nhận KTX 2H &amp; Đổi trả 30 ngày
+            </button>
+          </li>
+          <li>
+            <button type="button" data-info-modal="contact-support" class="text-left hover:text-[#1d1d1f] hover:underline transition-colors">
+              Hợp tác CLB Sinh viên &amp; Đại sứ
+            </button>
+          </li>
+          <li class="pt-1 text-[11px] text-[#6e6e73]">
+            Hotline: <span class="text-[#424245] font-medium">{{ .Site.Params.hotline | default "1900 6868" }}</span>
+          </li>
+          <li class="text-[11px] text-[#6e6e73]">
+            Email: <span class="text-[#424245]">{{ .Site.Params.email | default "hello@campuskit.vn" }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Nhận Ưu Đãi Mùa Thi -->
+      <div>
+        <h3 class="text-[12px] font-semibold text-[#1d1d1f] tracking-[-0.01em] mb-2.5">Nhận Ưu Đãi Mùa Thi</h3>
+        <p class="text-[11.5px] text-[#6e6e73] leading-relaxed mb-3">
+          Nhập email sinh viên để nhận thông báo mở bán bộ sưu tập mùa thi và đặc quyền giảm 15%.
+        </p>
+        <form id="newsletterForm" class="flex items-center gap-1.5 rounded-full border border-[#d2d2d7] bg-white p-1 focus-within:border-[#0071e3] transition-colors">
+          <input
+            id="newsletterEmail"
+            type="email"
+            required
+            placeholder="mssv@student.edu.vn"
+            class="w-full bg-transparent pl-3 pr-1 py-1.5 text-[12px] text-[#1d1d1f] placeholder-[#86868b] focus:outline-none"
+          />
+          <button
+            type="submit"
+            class="as-pill-blue px-3.5 py-1.5 text-[11.5px] shrink-0"
+          >
+            Đăng ký
+          </button>
+        </form>
+        <p class="text-[11px] text-[#6e6e73] leading-relaxed mt-3">
+          Địa chỉ: {{ .Site.Params.address | default "227 Nguyễn Văn Cừ, Phường Chợ Quán, TP. Hồ Chí Minh (CS1 – ĐH Khoa học Tự nhiên)" }}
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 5. Copyright Bottom Bar -->
+    <div class="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-[#6e6e73]">
+      <p>Bản quyền © {{ now.Year }} {{ .Site.Params.brandName | default "CampusKit" }} Việt Nam. Bảo lưu mọi quyền.</p>
+      <div class="flex flex-wrap items-center gap-3 text-[#424245]">
+        <span>Chính sách Bảo mật</span>
+        <span class="text-[#d2d2d7]">|</span>
+        <span>Điều khoản Sử dụng</span>
+        <span class="text-[#d2d2d7]">|</span>
+        <span class="font-medium text-[#1d1d1f]">Việt Nam</span>
+      </div>
+    </div>
+
+  </div>
+</footer>

@@ -1,0 +1,64 @@
+<!-- CAMPUSKIT FEATURED PRODUCTS SHELF ("SẢN PHẨM NỔI BẬT") -->
+<section id="category-section" class="py-6 sm:py-8">
+  <!-- Shelf Header + Circular Apple Paddles -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex items-end justify-between gap-4">
+    <h2 class="as-shelf-title">
+      <span>Sản phẩm nổi bật.</span> <span class="as-title-muted">Những món đồ bàn học được sinh viên chọn mua nhiều nhất.</span>
+    </h2>
+    <div class="flex items-center gap-2 shrink-0">
+      <button type="button" class="as-paddle-btn text-xl leading-none" data-shelf-prev="latestShelf" aria-label="Trước" disabled>‹</button>
+      <button type="button" class="as-paddle-btn text-xl leading-none" data-shelf-next="latestShelf" aria-label="Tiếp">›</button>
+    </div>
+  </div>
+
+  <!-- Horizontal Featured Product Card Shelf -->
+  {{- $featuredCards := slice
+    (dict "id" "prod-1"  "bg" "bg-[#DCEBFB]" "text" "text-[#1d1d1f]" "sub" "text-[#1d1d1f]/80" "eyebrow" "text-[#415872]" "imgBg" "bg-white" "btn" "bg-[#1d1d1f] hover:bg-[#0071e3] text-white" "fit" "object-cover")
+    (dict "id" "prod-16" "bg" "bg-[#1D1D1F]" "text" "text-white"     "sub" "text-white/80"     "eyebrow" "text-amber-300"  "imgBg" "bg-white" "btn" "bg-white hover:bg-[#0071e3] text-[#1d1d1f] hover:text-white" "fit" "object-cover")
+    (dict "id" "prod-5"  "bg" "bg-[#FBE2EB]" "text" "text-[#1d1d1f]" "sub" "text-[#1d1d1f]/80" "eyebrow" "text-[#7e3752]" "imgBg" "bg-white" "btn" "bg-[#1d1d1f] hover:bg-[#0071e3] text-white" "fit" "object-cover")
+    (dict "id" "prod-4"  "bg" "bg-[#E8E2F9]" "text" "text-[#1d1d1f]" "sub" "text-[#1d1d1f]/80" "eyebrow" "text-[#52437a]" "imgBg" "bg-white" "btn" "bg-[#1d1d1f] hover:bg-[#0071e3] text-white" "fit" "object-cover")
+    (dict "id" "prod-38" "bg" "bg-[#E1F3EC]" "text" "text-[#1d1d1f]" "sub" "text-[#1d1d1f]/80" "eyebrow" "text-[#2d624f]" "imgBg" "bg-white" "btn" "bg-[#1d1d1f] hover:bg-[#0071e3] text-white" "fit" "object-cover")
+    (dict "id" "prod-3"  "bg" "bg-[#F6EFE6]" "text" "text-[#1d1d1f]" "sub" "text-[#1d1d1f]/80" "eyebrow" "text-[#7a5230]" "imgBg" "bg-white" "btn" "bg-[#1d1d1f] hover:bg-[#0071e3] text-white" "fit" "object-cover")
+  -}}
+
+  <div data-shelf-track="latestShelf" class="as-shelf-track max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{- range $card := $featuredCards }}
+      {{- $matches := where hugo.Data.products "id" $card.id }}
+      {{- with index $matches 0 }}
+      <article
+        data-quick-view="{{ .id }}"
+        class="shrink-0 w-[310px] sm:w-[380px] h-[460px] snap-start as-card-hero {{ $card.bg }} {{ $card.text }} overflow-hidden relative flex flex-col justify-between p-7 group cursor-pointer"
+      >
+        <div class="relative z-10">
+          <p class="as-eyebrow {{ $card.eyebrow }} mb-1.5">{{ .badge | default "NỔI BẬT" }}</p>
+          <h3 class="text-[20px] sm:text-[22px] font-semibold tracking-[-0.018em] leading-[1.2] line-clamp-2 {{ $card.text }}">
+            {{ .name }}
+          </h3>
+          <p class="text-[13px] sm:text-[13.5px] font-normal {{ $card.sub }} leading-relaxed mt-2 line-clamp-2">
+            {{ .specs }} • <strong class="font-semibold">{{ lang.FormatNumber 0 .price }}₫</strong>
+          </p>
+        </div>
+
+        <div class="relative mt-4 w-full h-[228px] rounded-2xl overflow-hidden {{ $card.imgBg }} shadow-[0_8px_20px_rgba(0,0,0,0.06)]">
+          <img
+            src="{{ .image | relURL }}"
+            alt="{{ .name }}"
+            loading="lazy"
+            class="w-full h-full {{ $card.fit }} object-center group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
+        <button
+          type="button"
+          data-add-cart="{{ .id }}"
+          aria-label="Thêm {{ .name }} vào giỏ hàng"
+          title="Thêm nhanh vào giỏ"
+          class="absolute bottom-9 right-9 z-20 w-9 h-9 rounded-full {{ $card.btn }} flex items-center justify-center text-xl leading-none shadow-md transition-all"
+        >
+          +
+        </button>
+      </article>
+      {{- end }}
+    {{- end }}
+  </div>
+</section>

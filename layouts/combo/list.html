@@ -1,0 +1,162 @@
+{{ define "main" }}
+<section class="pt-8 sm:pt-12 pb-6 sm:pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav aria-label="Breadcrumb" class="text-xs font-medium text-[#6e6e73] mb-4 flex items-center gap-2">
+      <a href="{{ "/" | relURL }}" class="hover:text-[#1d1d1f] transition-colors">Trang chủ</a>
+      <span class="text-[#86868b]">›</span>
+      <span class="text-[#1d1d1f]">Combo Tiết Kiệm</span>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+      <div class="max-w-3xl">
+        <p class="as-eyebrow text-xs font-semibold text-[#b64400] tracking-tight mb-2">
+          CampusKit Bundles • Ảnh sản phẩm thật 100%
+        </p>
+        <h1 class="text-3xl sm:text-5xl font-semibold tracking-[-0.025em] text-[#1d1d1f] leading-[1.1]">
+          Combo Tiết Kiệm. <span class="text-[#6e6e73]">Chọn sẵn đủ món, thêm giỏ 1 chạm.</span>
+        </h1>
+        <p class="text-sm sm:text-[15px] text-[#424245] mt-3 max-w-2xl leading-relaxed">
+          Mỗi combo được ghép sẵn từ những sản phẩm thật đang có trên CampusKit — tiết kiệm ngay 10%–12% so với mua lẻ từng món và vẫn áp dụng được mã ưu đãi sinh viên.
+        </p>
+      </div>
+      <a href="{{ "/san-pham/" | relURL }}" class="as-pill-outline shrink-0 self-start lg:self-auto">
+        <span>Xem tất cả {{ len hugo.Data.products }} sản phẩm lẻ ›</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{{- $combos := slice
+  (dict
+    "id" "combo-phong-thi"
+    "tag" "TIẾT KIỆM 10% • MÙA THI"
+    "tagCls" "bg-[#fff0e0] text-[#b64400]"
+    "title" "Combo Phòng Thi Cấp Tốc"
+    "subtitle" "Đủ máy tính chuẩn phòng thi, bút chì 2B tô trắc nghiệm, bút gel dự phòng và bút highlight ôn đề."
+    "discount" 10
+    "products" (slice "prod-37" "prod-13" "prod-26" "prod-11")
+  )
+  (dict
+    "id" "combo-ban-hoc"
+    "tag" "TIẾT KIỆM 12% • PHỔ BIẾN NHẤT"
+    "tagCls" "bg-[#dcebfb] text-[#005bb5]"
+    "title" "Combo Bàn Học Tối Giản"
+    "subtitle" "Trọn bộ 5 món tối ưu tư thế ngồi học và ghi chép gọn gàng: giá đỡ, phím mỏng, chuột êm, sổ MUJI và bút gel."
+    "discount" 12
+    "products" (slice "prod-1" "prod-18" "prod-5" "prod-3" "prod-26")
+  )
+  (dict
+    "id" "combo-on-thi"
+    "tag" "TIẾT KIỆM 12% • CHỐNG ỒN"
+    "tagCls" "bg-[#e8e2f9] text-[#52437a]"
+    "title" "Combo Ôn Thi Tập Trung"
+    "subtitle" "Phím cơ Aula F75, chuột Silent M331, tai nghe chống ồn Baseus ANC và đèn học 360° cho những phiên học sâu."
+    "discount" 12
+    "products" (slice "prod-16" "prod-5" "prod-33" "prod-4")
+  )
+  (dict
+    "id" "combo-tan-sv"
+    "tag" "TIẾT KIỆM 10% • ĐI HỌC HẰNG NGÀY"
+    "tagCls" "bg-[#e1f3ec] text-[#2d624f]"
+    "title" "Combo Tân Sinh Viên"
+    "subtitle" "Sẵn sàng lên giảng đường mỗi ngày với balo chống nước, túi chống sốc laptop, bình giữ nhiệt và sổ tay B5."
+    "discount" 10
+    "products" (slice "prod-38" "prod-39" "prod-40" "prod-3")
+  )
+-}}
+
+<section class="pb-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-7">
+      {{- range $combo := $combos }}
+        {{- $rawTotal := 0 -}}
+        {{- $resolved := slice -}}
+        {{- range $pid := $combo.products -}}
+          {{- $found := where hugo.Data.products "id" $pid -}}
+          {{- with index $found 0 -}}
+            {{- $rawTotal = add $rawTotal (int .price) -}}
+            {{- $resolved = $resolved | append . -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $saveAmt := div (mul $rawTotal $combo.discount) 100 -}}
+        {{- $comboPrice := sub $rawTotal $saveAmt -}}
+
+        <article class="ck-section-box p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <!-- Header -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold {{ $combo.tagCls }}">
+                  {{ $combo.tag }}
+                </span>
+                <span class="text-xs font-medium text-[#6e6e73]">{{ len $resolved }} sản phẩm</span>
+              </div>
+              <h2 class="text-2xl font-semibold tracking-[-0.02em] text-[#1d1d1f]">{{ $combo.title }}</h2>
+              <p class="text-[13.5px] text-[#424245] leading-relaxed">{{ $combo.subtitle }}</p>
+            </div>
+
+            <!-- Real Product Photo Strip (2x2 or 5-item compact grid) -->
+            <div class="grid {{ if eq (len $resolved) 5 }}grid-cols-3 sm:grid-cols-5{{ else }}grid-cols-2 sm:grid-cols-4{{ end }} gap-2.5">
+              {{- range $item := $resolved }}
+              <button
+                type="button"
+                data-quick-view="{{ $item.id }}"
+                title="Xem chi tiết {{ $item.name }}"
+                class="group rounded-2xl bg-[#f5f5f7] border border-black/[0.04] p-2 text-left hover:border-[#0071e3]/40 transition-all focus:outline-none"
+              >
+                <div class="aspect-square rounded-xl bg-white overflow-hidden mb-1.5">
+                  <img
+                    src="{{ $item.image | relURL }}"
+                    alt="{{ $item.name }}"
+                    loading="lazy"
+                    class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <p class="text-[11px] font-medium text-[#1d1d1f] line-clamp-1 leading-snug">{{ $item.subCategory }}</p>
+              </button>
+              {{- end }}
+            </div>
+
+            <!-- Itemized Product List -->
+            <ul class="divide-y divide-[#e5e5ea] rounded-2xl bg-[#f5f5f7]/80 px-4 py-1 text-xs">
+              {{- range $item := $resolved }}
+              <li class="py-2.5 flex items-center justify-between gap-3">
+                <button
+                  type="button"
+                  data-quick-view="{{ $item.id }}"
+                  class="text-left text-[#1d1d1f] hover:text-[#0066cc] font-medium line-clamp-1 transition-colors"
+                >
+                  {{ $item.name }}
+                </button>
+                <span class="text-[#6e6e73] font-medium tabular-nums shrink-0">{{ lang.FormatNumber 0 $item.price }}₫</span>
+              </li>
+              {{- end }}
+            </ul>
+          </div>
+
+          <!-- Pricing & 1-Click Add Bundle CTA -->
+          <div class="pt-4 border-t border-black/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-baseline gap-2.5">
+                <span class="text-2xl font-bold tracking-[-0.02em] text-[#1d1d1f] tabular-nums">{{ lang.FormatNumber 0 $comboPrice }}₫</span>
+                <span class="text-xs text-[#86868b] line-through tabular-nums">{{ lang.FormatNumber 0 $rawTotal }}₫</span>
+              </div>
+              <p class="text-[11.5px] font-medium text-[#b64400] mt-0.5">
+                Tiết kiệm {{ lang.FormatNumber 0 $saveAmt }}₫ khi mua trọn combo
+              </p>
+            </div>
+
+            <button
+              type="button"
+              data-add-bundle="{{ delimit $combo.products "," }}"
+              class="as-pill-blue inline-flex items-center justify-center gap-1.5 px-5 py-3 text-[13px] font-medium shadow-sm whitespace-nowrap shrink-0"
+            >
+              <span>+ Thêm trọn Combo vào giỏ</span>
+            </button>
+          </div>
+        </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{ end }}
